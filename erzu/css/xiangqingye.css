@@ -1,0 +1,260 @@
+/* 
+* @Author: Marte
+* @Date:   2018-08-24 16:53:14
+* @Last Modified by:   Marte
+* @Last Modified time: 2018-09-08 11:03:52
+*/
+#select .container{border:1px solid #ccc;}
+
+#select .slt_l{width: 402px;height: 715px;}
+
+#select .slt_l #photo{width: 402px;height: 391px;overflow:hidden;}
+#select .slt_l #photo img{width: 402px;height: 391px;}
+#select .slt_l  ul{box-sizing:border-box;
+    height: 100px;padding:20px 26px;
+    background:url(../images/zjt.png) no-repeat left center,
+    url(../images/yjt.png) no-repeat right center;}
+
+#select .slt_l  ul li{float:left;margin-right:10px;}
+#select .slt_l  ul li:last-child{margin-right:0;}
+
+#select .slt_l ul li a{display:block;border:2px solid #aaa;}
+#select .slt_l ul li a:hover{border:2px solid #FF6701;}
+
+
+#select .slt_c{
+    height: 715px;padding-left:10px;}
+#select .slt_c .L_top{width: 360px;height: 86px;background:url(../images/cs1.png) no-repeat 5px bottom;#bbb;font-size: 30px;}
+
+#select .slt_c .tab{width: 360px;height: 203px;/* background-color:#888; */padding-top:14px;}
+
+#select .slt_c .tab table td{border:1px solid #ccc;height:30px;padding-right:10px;}
+#select .slt_c .tab table tr:first-of-type{font-weight:bold;}
+#select .slt_c .tab table tr:nth-of-type(odd){background:#F5F5F5;}
+
+#select .slt_c .Extra{width: 360px;height: 133px;background:url(../images/list.png) no-repeat;} 
+
+
+/*#select .slt_c .cs{width: 360px;height: 84px;background-color:#eee;} */
+#select .slt_c .cs .size{width: 360px;height: 27px;padding-top:15px;}
+#select .slt_c .cs .color{width: 360px;height: 27px;padding-top:15px;}
+#select .slt_c .cs .size span{padding-right: 10px;} 
+#select .slt_c .cs .color span{padding-right: 5px;}
+#select .slt_c .cs li{float:left;padding:0 5px;border:1px solid #ccc;margin-right:5px;}
+
+#select .slt_c .ls{display:block;width: 355px;height: 16px;
+    background:url(../images/cs.png) no-repeat 5px;
+}
+#select .slt_c .jiage p,#select .slt_c .jiage input{margin-top:10px;}
+#select .slt_c .jiage input{margin-left:5px;border:1px solid #ccc;width:70px;}
+#select .slt_c .jiage #car{display:block;
+width: 142px;height:32px;float:right;background:url("../images/c3.png") no-repeat;}
+
+
+#select .slt_r{width: 190px;height: 715px;margin-left:18px;
+    background: url(../images/picture_r.png) no-repeat;}
+
+
+
+#pay .container{height: 236px;
+    margin-top:10px;border:2px solid #aaa;}
+#pay .container .navs{margin:0 5px;width: 966px;height: 36px;border-bottom:1px solid #ccc;}
+#pay .container span{display:block;float-size:14px;font-weight: bold;color:black;padding:0 10px;float:left;line-height:36px;}
+#pay .container li{float:left;height: 30px;color:black;line-height:30px;padding:0 10px;margin-top:6px;}
+
+#pay .container li:active{border:1px solid #ccc;border-bottom:0 none;margin-top:5px;padding:0 9px;
+font-weight:bold;}
+
+#list1,#list2,#list3{float:left;width: 172px;margin-right:5px;}
+
+#list1 p,#list2 p,#list3 p{font-size:12px;line-height: 14px;}
+
+#list1 p:last-child,#list2 p:last-child,#list3 p:last-child{color:red;}
+#list1 img,#list2 img,#list3 img{width: 172px;height: 134px;}
+#jia1,#jia2{width: 42px;float:left;text-align:center;line-height:200px;}
+#deng{width: 42px;float:right;text-align:center;line-height:200px;}
+#list4{float:right;width: 160px;padding-top:14px;}
+#list4 ul li .color{color:red;}
+#list4 ul li .last_price{color:red;font-weight:bold;font-size:18px;}
+#list4 ul li .save_g{color:#58bc58;}
+
+
+
+#Y-home{
+    width: 100%;
+    /*height: 35px;*/
+}
+#Y-home a{
+    display: block;
+    float: left;
+    font-size: 12px;
+    height: 35px;
+    line-height: 35px;
+    padding-left: 5px;
+    color:#aaa;
+}
+#Y-home .container{
+    position: relative;
+}
+#Y-home a:first-of-type{
+    margin-left: 20px;
+}
+#Y-home i{
+    position: absolute;
+    top: 10px;
+    left: 0;
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url("../images/caidian.fw.png") no-repeat;
+    background-position: -525px 0;
+}
+.fixed{position: fixed; top: 0;left: 0;width:100%;height: 45px;}
+
+/*==========我是一条不知名的分界线===============*/
+#cyt-bottom .bottom_t{border-bottom:2px solid #404040;padding-top:21px;margin-bottom: 1px;}
+#cyt-bottom .bottom_t h3:first-child{width: 150px;height: 25px;line-height: 25px;font-size: 14px;font-weight: bold;color:#333333;}
+#cyt-bottom .bottom_t h3:nth-child(2){width: 236px;height: 25px;line-height: 26px;background-color:#505050;font-weight: bold;color:#fff;text-align: center;position:relative;letter-spacing:1px;}
+#cyt-bottom .bottom_t h3 i{width: 19px;height: 25px;background:url("../images/bottom.fw.png") no-repeat;position:absolute;right:7px;top:0px;}
+#cyt-bottom .bottom_l{width: 740px;border-right: 1px solid #ccc;padding-right:2px;}
+#cyt-bottom .bottom_l>p{height: 276px;padding:14px 22px 0 10px;color:#333333;line-height: 18px;font-family:"微软雅黑";}
+#cyt-bottom .bottom_l>p span{line-height: 26px;}
+#cyt-bottom .bottom_l img{margin-bottom:5px;}
+#cyt-bottom .bottom_l .news{height: 81px;background:#F2F2F2;font-size: 0;text-align: center;}
+#cyt-bottom .bottom_l .news>div{display:inline-block;}
+#cyt-bottom .bottom_l .news>div:nth-of-type(1){width: 88px;display:inline-block;}
+#cyt-bottom .bottom_l .news span{font-size: 12px;color:#6C6C6C;}
+
+
+
+#cyt-bottom .bottom_l h3{height: 43px;padding-top:11px;line-height: 32px;font-size: 16px;font-weight: bold;color:#333333;box-sizing:border-box;border-bottom:2px solid #404040;margin-bottom: 2px;}
+#cyt-bottom .bottom_l .pingjia{height: 112px;background-color:#EFEFEF;padding-top:14px;padding-left: 10px;line-height: 22px;}
+#cyt-bottom .bottom_l .pingjia_l{position:relative;font-size: 14px;}
+#cyt-bottom .bottom_l .pingjia_l i{display:inline-block;width: 24px;height: 22px;background:url("../images/bottom.fw.png") no-repeat -30px 0;position:absolute;top:19px;margin-bottom:8px;}
+#cyt-bottom .bottom_l .pingjia_l .star2{background-position:left:-30px top:0;top:18px;left:30px;}
+#cyt-bottom .bottom_l .pingjia_l .star3{background-position:left:-30px top:0;
+top:18px;left:60px;}
+#cyt-bottom .bottom_l .pingjia_l .star4{background-position:left:-30px top:0;top:18px;left:90px;}
+#cyt-bottom .bottom_l .pingjia_l .star5{background-position:-60px 0;
+top:18px;left:120px;}
+#cyt-bottom .bottom_l .pingjia_l span:nth-of-type(2){color:#FE4500;text-decoration: underline;}
+#cyt-bottom .bottom_l .pingjia_r progress{width: 136px;margin-right:3px;background-color:#DCDCDC;}
+#cyt-bottom .bottom_l .pingjia_r span{padding:0 10px 0 7px;}
+
+/*#cyt-bottom .bottom_l ul{height: 601px;}*/
+#cyt-bottom .bottom_l ul li{border-bottom:1px dashed #CFCFCF;}
+#cyt-bottom .bottom_l ul li>div:first-child{width: 140px;padding-top:28px;position:relative;}
+#cyt-bottom .bottom_l ul li>div:first-child i{width: 15px;height: 16px;position:absolute;left:0;top:83px;background: url("../images/bottom.fw.png")no-repeat -90px 0;}
+#cyt-bottom .bottom_l ul li>div:first-child i:nth-of-type(2){background-position:-110px 0;position:absolute;left:50px;top:83px;}
+#cyt-bottom .bottom_l ul li>div:first-child span:nth-of-type(2){color:red;}
+#cyt-bottom .bottom_l ul li>div:first-child span:nth-of-type(3){display:inline-block;padding-left: 20px;margin-top: 11px;}
+#cyt-bottom .bottom_l ul li>div:first-child span:nth-of-type(4){display:inline-block;padding-left: 30px;margin-top: 11px;}
+
+#cyt-bottom .bottom_l ul li>div:last-child{padding:0 12px 10px 0;box-sizing:border-box;position:relative;}
+#cyt-bottom .bottom_l ul li>div:last-child p:first-of-type{width: 547px;padding-top:28px;line-height: 18px;}
+#cyt-bottom .bottom_l ul li>div:last-child img{width: 52px;height: 52px;border:1px solid #ccc;margin:10px 5px 10px;}
+
+#cyt-bottom .bottom_l ul li>div:last-child i{width:21px;height: 19px;background:url("../images/bottom.fw.png") no-repeat -140px 0;position:absolute;left:7px;bottom:17px;}
+#cyt-bottom .bottom_l ul li>div:last-child p:last-of-type{width: 550px;height: 30px;border:1px dashed #9BDF70;background-color:#F0FBEB;font-size: 14px;color:#228B22;line-height:30px;padding-left:30px;}
+
+
+
+
+
+
+#cyt-bottom .bottom_l .fanye{height: 36px;line-height: 36px;text-align:right;padding-right: 40px;position:relative;}
+#cyt-bottom .bottom_l .fanye i{width: 12px;height: 11px;background:url("../images/bottom.fw.png") no-repeat -165px 0;position:absolute;right:23px;bottom:12px;}
+#cyt-bottom .bottom_l .fanye a{color:#333333;}
+
+
+
+
+
+#cyt-bottom .bottom_l form{position:relative;height: 396px;border-top:2px solid #404040;padding:60px 0 0 20px;box-sizing: border-box;background: #EFEFEF;}
+#cyt-bottom .bottom_l form i{display:inline-block;width: 24px;height: 22px;background:url("../images/shangpin5.png") no-repeat ;
+background-size:100% 100%; position:absolute;top:19px;margin-bottom:8px;left:20px;}
+#cyt-bottom .bottom_l form i:nth-of-type(2){top:18px;left:50px;}
+#cyt-bottom .bottom_l form i:nth-of-type(3){top:18px;left:80px;}
+#cyt-bottom .bottom_l form i:nth-of-type(4){top:18px;left:110px;}
+#cyt-bottom .bottom_l form i:nth-of-type(5){top:18px;left:140px;}
+#cyt-bottom .bottom_l form .on{
+    background: url("../images/shangpin4.png") no-repeat;
+    background-size:100% 100%;
+}
+
+#cyt-bottom .bottom_l form input:nth-of-type(1){border:1px solid #ccc;margin-bottom:14px;}
+#cyt-bottom .bottom_l form textarea{display:block;width:380px;height:110px;margin-bottom:14px;}
+#cyt-bottom .bottom_l form input:nth-last-of-type(3){border:1px solid #ccc;width: 55px;height: 25px;margin:10px 5px 10px 0;}
+#cyt-bottom .bottom_l form input:nth-last-of-type(2){width: 120px;height: 25px;}
+#cyt-bottom .bottom_l form input:last-of-type{width: 64px;height: 32px;background:#FA7A14;color:#fff;font-family:"微软雅黑";}
+
+
+
+
+
+#cyt-bottom .bottom_r{width: 236px;height: 1700px;padding:25px 35px 0 41px;box-sizing: border-box;}
+#cyt-bottom .bottom_r>div{height: 230px;text-align: center;line-height: 16px;margin-top: 20px;}
+#cyt-bottom .bottom_r>div img{width: 160px;height: 139px;}
+#cyt-bottom .bottom_r>div p:nth-of-type(3) span{color:red;}
+#cyt-bottom .bottom_r>div span:last-of-type{color:#298B22;} 
+
+
+
+
+
+
+/*==========我是一条帅帅哒分界线================*/
+#footer .container{border-top:2px solid #404040;}
+#footer .container dl{padding-right:45px;}
+#footer .container dl:first-child{padding:0 68px 0 10px;}
+#footer .container dl dt{font-size:10px;font-weight:bold;padding:14px 0 10px 0;color:#333;}
+#footer .container dl dd a{display:block;line-height:18px;color:#666;padding-top:5px;
+    position:relative;
+}
+#footer .container dl:last-of-type a{padding-left:24px;}
+#footer .container dl:last-child span{display:inline-block;color:red;line-height:0;}
+#footer .container dl:last-child p{color:#666;line-height: 10px;}
+#footer .container .last  dd:nth-of-type(1) a i{
+    width:19px;height:20px;
+    background:url("../images/fff.fw.png") no-repeat 0 0;
+    position:absolute;
+    top:10px;
+    left:2px;
+}
+#footer .container .last dd:nth-of-type(2) a i{
+    width:19px;height:20px;
+    background:url("../images/fff.fw.png") no-repeat -25px 0;
+    position:absolute;
+    top:10px;
+    left:2px;
+}
+#footer .container .last dd:nth-of-type(3) a i{
+    width:19px;height:20px;
+    background:url("../images/fff.fw.png") no-repeat -50px 0;
+    position:absolute;
+    top:12px;
+    left:2px;
+}
+#footer .container .eml{width: 243px;padding-top:10px;}
+#footer .container .eml p{font-size:12px;color:#333;}
+#footer .container .eml input:nth-of-type(1){width: 170px;height: 22px;border:1px solid #333;margin-top:8px;}
+#footer .container .eml form{position:relative;}
+#footer .container .eml form i{
+    width:14px;height:11px;
+    background:url("../images/fff.fw.png") no-repeat -80px 0;
+    position:absolute;
+    top:45px;
+    left:47px;}
+#footer .container .eml input:nth-of-type(2){
+    width: 80px;height: 22px;background:#444;color:#fff;
+margin-top:8px;padding-left:18px;font-size: 12px;}
+#footer .imgs{
+  width:738px;height: 65px;
+  background:url("../images/fl.png") no-repeat;
+    margin:50px auto;
+}
+/*==========我是一条帅帅哒分界线================*/
+
+aside{width:50px;height:160px;position:fixed;right:132px;top:200px;border-top:2px solid red;}
+aside span:nth-child(2){font-size:25px;color:#FF6400;}
+aside span:nth-child(4){display: block;text-align: center;background: #D9D9D9;height:30px;line-height: 30px;cursor:pointer;}
