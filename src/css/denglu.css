@@ -1,0 +1,219 @@
+@charset "UTF-8";
+.welland {
+  width: 968px;
+  margin: 0 auto;
+  font: 12px '宋体';
+  padding-bottom: 50px;
+}
+
+.welland .EWM {
+  position: absolute;
+  top: 152px;
+  left: 50%;
+  margin: 0 0 0 -628px;
+}
+
+.welland .land_logo {
+  height: 112px;
+}
+
+.welland .land_logo .l {
+  float: left;
+}
+
+.welland .land_logo .land_logo_img {
+  height: 57px;
+  margin-top: 31px;
+}
+
+.welland .land_logo .land_logo_img a {
+  width: 185px;
+  background: url(../images/welland.gif) 0 0 no-repeat;
+}
+
+.welland .land_logo .land_logo_img a, .welland .land_logo .land_logo_img span {
+  display: block;
+  height: 57px;
+  overflow: hidden;
+}
+
+.welland .land_logo .land_logo_img span {
+  width: 169px;
+  background: url(../images/welland.gif) 0 -58px no-repeat;
+}
+
+.welland .land_logo .land_logo_img a, .welland .land_logo .land_logo_img span {
+  display: block;
+  height: 57px;
+  overflow: hidden;
+}
+
+.welland .kefuphonenum {
+  color: #525252;
+  padding-top: 70px;
+}
+
+.welland .kefuphonenum a {
+  color: #0089cf;
+}
+
+.welland .kefuphonenum strong {
+  font: 15px '微软雅黑';
+  color: #eb0007;
+  font-weight: normal;
+}
+
+.welland #land {
+  padding-top: 0;
+}
+
+.welland #land .land_con_l {
+  width: 532px;
+  padding-left: 133px;
+  _padding-left: 127px;
+  color: #666666;
+  padding-top: 62px;
+}
+
+.welland #land .land_con_l .land_item {
+  width: 351px;
+  height: 65px;
+}
+
+.welland #land .land_con_l .item-ifo {
+  position: relative;
+  z-index: 1;
+}
+
+.welland #land .land_con_l .yhm_text {
+  font: 13px Arial;
+  color: #222;
+  width: 315px;
+  padding: 5px 25px 5px 10px;
+  height: 25px;
+  line-height: 25px;
+  border: 1px solid #a2a2a2;
+}
+
+.welland #land .land_con_l .land_ico2, .welland #land .land_con_l .land_ico3, .welland #land .land_con_l .land_ico5, .welland #land .land_con_l .land_ico9, .welland #land .land_con_l .land_ico10 {
+  width: 16px;
+  height: 19px;
+  background: url(../images/welland.gif) 0 -251px no-repeat;
+}
+
+.welland #land .land_con_l .land_ico, .welland #land .land_con_l .land_ico4, .welland #land .land_con_l .land_ico6, .welland #land .land_con_l .land_ico7 {
+  width: 16px;
+  height: 16px;
+  background: url(../images/welland.gif) 0 -229px no-repeat;
+}
+
+.welland #land .land_con_l .i-name {
+  position: absolute;
+  top: 8px;
+  right: 9px;
+  z-index: 10;
+}
+
+.welland #land .land_con_l #yz_user {
+  color: #ccc;
+}
+
+.welland #land .land_con_l .land_item2 {
+  width: 351px;
+  height: 31px;
+}
+
+.welland #land .land_con_l .checkbox {
+  display: block;
+  width: 13px;
+  height: 13px;
+}
+
+.welland #land .land_con_l .mjy {
+  height: 13px;
+  line-height: 13px;
+  display: block;
+  margin-left: 6px;
+  _height: 15px;
+  _line-height: 15px;
+}
+
+.welland #land .land_con_l .wjma a {
+  color: #0089cf;
+}
+
+.welland #land .land_con_l .login-btn {
+  height: 37px;
+  margin-top: 10px;
+}
+
+.welland #land .land_con_l .btn-img {
+  width: 351px;
+  height: 37px;
+  background: url(../images/welland.gif) 0 -117px no-repeat;
+  border: none;
+  cursor: pointer;
+}
+
+.welland #land .land_con_l .login_tips {
+  padding: 25px 0;
+  color: #888;
+  width: 351px;
+  line-height: 22px;
+}
+
+.welland #land .land_con_r {
+  height: 380px;
+  width: 217px;
+  background-color: #fff6ec;
+  height: 316px;
+  padding-left: 82px;
+  padding-top: 58px;
+}
+
+.welland #land .land_con_r .land_item3 {
+  width: 219px;
+  height: 57px;
+}
+
+.welland #land .land_con_r .land_item3 a {
+  width: 142px;
+  height: 32px;
+  background: url(../images/welland.gif) 0 -155px no-repeat;
+  line-height: 32px;
+  text-align: center;
+  color: #ff6000;
+  margin-top: 10px;
+}
+
+.welland #land .land_con_r .land_item3 span {
+  font: 14px '微软雅黑';
+  color: #555555;
+}
+
+.welland #land .land_con_r .land_item3 a, .welland #land .land_con_r land_item3 span {
+  display: block;
+}
+
+.welland #land .land_con_r .mg42 {
+  margin-top: 42px;
+}
+
+.welland .land_con {
+  border: 2px solid #ff8400;
+  width: 964px;
+}
+
+input, textarea, select, button {
+  text-rendering: auto;
+  color: initial;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  margin: 0em;
+  font: 400 13.3333px Arial;
+}
