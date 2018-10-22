@@ -8,7 +8,7 @@
         if(admin === ''){
             let cii = `<li class="yg-card">
                         <span>
-                            <a href="./html/denglu.html" id="__AD_head_zhuce" rel="nofollow">
+                            <a href="./html/zuce.html" id="__AD_head_zhuce" rel="nofollow">
                                 注册
                             </a>
                         </span>|

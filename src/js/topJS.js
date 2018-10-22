@@ -52,16 +52,18 @@ jQuery(function($){
 
 
                     //购物车
-    $(".mycart").on("mouseover",function(){
-        $(".mycart .cart-bag").addClass("active");
-        $(".mycart .cart-info").css("display","block");
-    })
-    $(".mycart").on("mouseout",function(){
-        $(".mycart .cart-bag").removeClass("active");
-        $(".mycart .cart-info").css("display","none");
-    })
+        $(".mycart").on("mouseover",function(){
+            $(".mycart .cart-bag").addClass("active");
+            $(".mycart .cart-info").css("display","block");
+        })
+        $(".mycart").on("mouseout",function(){
+            $(".mycart .cart-bag").removeClass("active");
+            $(".mycart .cart-info").css("display","none");
+        })
+    });
 
-                //
+
+    //
                 //=====================================
                   //侧边用户  购物车
                 cebian();
@@ -128,22 +130,13 @@ jQuery(function($){
                         window.scrollTo(0, $huadongy)
                     },30);
                 })
+            
+//========头部结束=============
+
+
+
+         $('#footerBottom').load('../html/bottom.html',function(){
             });
 
- $('#footerBottom').load('../html/bottom.html',function(){
-            });
-// ==============================
-// 
-// 
 
-
-//获取参数
-    var params = decodeURI(location.search).slice(1); 
-    var paramsArr = params.split("&");
-    var paramsObj = {};
-    paramsArr.forEach(function(item){
-        var arr = item.split("=");
-        paramsObj[arr[0]] = arr[1];
-    });
-    console.log(paramsObj);
 })

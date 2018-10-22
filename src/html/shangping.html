@@ -2,14 +2,447 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <title>Document</title>
+    <title>商品列表</title>
     <link rel="stylesheet" type="text/css" href="../css/public.css" />
-
+    <link rel="stylesheet" type="text/css" href="../css/shangping.css" />
     <script type="text/javascript" src="../lib/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
     <script type="text/javascript" src="../js/shangping.js"></script>
 </head>
 <body>
     <header id="pageHeader"></header>
+     
+
+     <div class="iconimghover">
+         <div class="classify-con">
+            <div class="classify-menu border1">
+                <div class="menulist" style="margin-left: 120px;">
+                    <div class="listthemone l" style="">
+                        <div class="menu-icon">
+                            <div class="iconimgshow">
+                                <a id="__AD_shipinpindao_erji_fenlei_total" href="#">
+                                    <img src="../images/menuimg_03.png">
+                                </a>
+                            </div>
+                            <div class="iconimghover" style="display:block">
+                                <a id="__AD_shipinpindao_erji_fenlei_total" href="#">
+                                    <img src="../images/menuhover_03.png">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="menuname">
+                            <a href="shangping.html" id="__AD_shipinpindao_erji_fenlei_total" class="">全部商品</a>
+                        </div>
+                    </div>
+                    <div class="listthemone l">
+                        <div class="menu-icon">
+                            <div class="iconimgshow">
+                                <a id="__AD_shipinpindao_erji_fenlei_01" href="#">
+                                    <img src="../images/icon_a_93.png">
+                                </a>
+                            </div>
+                            <div class="iconimghover">
+                                <a id="__AD_shipinpindao_erji_fenlei_02" href="#">
+                                    <img src="../images/icon_b_93.png">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="menuname">
+                            <a href="shangping.html" id="__AD_shipinpindao_erji_fenlei_01">进口食品</a>
+                        </div>
+                    </div>
+                    <div class="listthemone l">
+                        <div class="menu-icon">
+                            <div class="iconimgshow">
+                                <a id="__AD_shipinpindao_erji_fenlei_02" href="#">
+                                    <img src="../images/icon_a_829.png">
+                                </a>
+                            </div>
+                            <div class="iconimghover">
+                                <a id="__AD_shipinpindao_erji_fenlei_02" href="#">
+                                    <img src="../images/icon_b_829.png">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="menuname">
+                            <a href="shangping.html" id="__AD_shipinpindao_erji_fenlei_02" class="">营养保健</a>
+                        </div>
+                    </div>
+                    <div class="listthemone l">
+                        <div class="menu-icon">
+                            <div class="iconimgshow">
+                                <a id="__AD_shipinpindao_erji_fenlei_03" href="#">
+                                    <img src="../images/icon_a_364.png">
+                                </a>
+                            </div>
+                            <div class="iconimghover">
+                                <a id="__AD_shipinpindao_erji_fenlei_03" href="#/">
+                                    <img src="../images/icon_b_364.png">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="menuname">
+                            <a href="shangping.html" id="__AD_shipinpindao_erji_fenlei_03" class="">休闲食品</a>
+                        </div>
+                    </div>
+                    <div class="listthemone l">
+                        <div class="menu-icon">
+                            <div class="iconimgshow">
+                                <a id="__AD_shipinpindao_erji_fenlei_04" href="#">
+                                    <img src="../images/icon_a_959.png">
+                                </a>
+                            </div>
+                            <div class="iconimghover">
+                                <a id="__AD_shipinpindao_erji_fenlei_04" href="#">
+                                    <img src="../images/icon_b_959.png">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="menuname">
+                            <a href="shangping.html" id="__AD_shipinpindao_erji_fenlei_04" class="">粮油干货</a>
+                        </div>
+                    </div>
+                    <div class="listthemone l">
+                        <div class="menu-icon">
+                            <div class="iconimgshow">
+                                <a id="__AD_shipinpindao_erji_fenlei_05" href="#">
+                                    <img src="../images/icon_a_822.png">
+                                </a>
+                            </div>
+                            <div class="iconimghover">
+                                <a id="__AD_shipinpindao_erji_fenlei_05" href="#">
+                                    <img src="../images/icon_b_822.png">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="menuname">
+                            <a href="shangping.html" id="__AD_shipinpindao_erji_fenlei_05">酒水茶饮</a>
+                        </div>
+                    </div>
+                    <div class="listthemone l">
+                        <div class="menu-icon">
+                            <div class="iconimgshow">
+                                <a id="__AD_shipinpindao_erji_fenlei_06" href="#">
+                                    <img src="../images/icon_a_1245.png">
+                                </a>
+                            </div>
+                            <div class="iconimghover">
+                                <a id="__AD_shipinpindao_erji_fenlei_06" href="#">
+                                    <img src="../images/icon_b_1245.png">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="menuname">
+                            <a href="shangping.html" id="__AD_shipinpindao_erji_fenlei_06">生鲜食品</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="classify-list">
+                <div class="list-tittle">
+                    <div class="classify-tittle l">
+                        <span class="category">
+                            <h1> 美食•民生 </h1>
+                        </span>
+                    </div>
+               </div>
+
+               <div class="list-con">
+                   <div class="good-list" id="good_list">
+                       <div class="good-list-nav">
+                           <div class="nav-sorting l">
+                               <ul class="nav-sorting-list">
+                                    <li>快速查找：</li>
+                                    <li class="navli clickbg">
+                                        <span class="navspan jian">今日推荐</span>
+                                    </li>
+                                    <li><b>|</b>
+                                    </li>
+                                    <li class="mgr12  navli">
+                                        <span class="navspan ">销量</span>
+                                    </li>
+                                    <li class="mgr12  navli">
+                                        <span class="navspan ">上架时间</span>
+                                    </li>
+                                    <li class="nav-price default">价格</li>
+                                    <li class="navli ">
+                                        <span class="navspan ">特惠</span>
+                                    </li>
+                               </ul>
+                           </div>
+                           <div class="nav-filter r">
+                               <div class="l ugozy">
+                                    <input class="l" name="" type="checkbox">
+                                    <label class="l">优品惠自营</label>
+                                </div>
+                                <div class="l ugozyq">
+                                    <input class="l" name="" type="checkbox" >
+                                    <label class="l">入驻商家</label>
+                                </div>
+                           </div>
+                       </div>
+<!-- ========================================================== -->
+                       <div class="smPruArea clearfix" id="goodslist_div">
+                          
+                       </div>
+                       <div class="page_f clearfix" id="redline">
+                              <div class="left_p r">
+                                <a class="last_page l mgr5 p_now" href="#">首页</a>
+                                <div class="pagelist">
+                                  <a class="p_num p_now" href="#">1</a>
+                                  <a class="p_num " href="#">2</a>
+                                  <a class="p_num " href="#">3</a>
+                                  <a class="p_num " href="#">4</a>
+                                </div>
+                                <a class="last_page" href="#">末页</a>
+                            </div>
+                            </div>
+
+
+                            <!-- ==================================== -->
+                        <div class="classify-menu border1">
+                <div class="menulist" style="margin-left: 120px;">
+                    <div class="listthemone l" style="">
+                        <div class="menu-icon">
+                            <div class="iconimgshow">
+                                <a id="__AD_shipinpindao_erji_fenlei_total" href="#">
+                                    <img src="../images/menuimg_03.png">
+                                </a>
+                            </div>
+                            <div class="iconimghover" style="display:block">
+                                <a id="__AD_shipinpindao_erji_fenlei_total" href="#">
+                                    <img src="../images/menuhover_03.png">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="menuname">
+                            <a href="shangping.html" id="__AD_shipinpindao_erji_fenlei_total" class="">全部商品</a>
+                        </div>
+                    </div>
+                    <div class="listthemone l">
+                        <div class="menu-icon">
+                            <div class="iconimgshow">
+                                <a id="__AD_shipinpindao_erji_fenlei_01" href="#">
+                                    <img src="../images/icon_a_93.png">
+                                </a>
+                            </div>
+                            <div class="iconimghover">
+                                <a id="__AD_shipinpindao_erji_fenlei_02" href="#">
+                                    <img src="../images/icon_b_93.png">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="menuname">
+                            <a href="shangping.html" id="__AD_shipinpindao_erji_fenlei_01">进口食品</a>
+                        </div>
+                    </div>
+                    <div class="listthemone l">
+                        <div class="menu-icon">
+                            <div class="iconimgshow">
+                                <a id="__AD_shipinpindao_erji_fenlei_02" href="#">
+                                    <img src="../images/icon_a_829.png">
+                                </a>
+                            </div>
+                            <div class="iconimghover">
+                                <a id="__AD_shipinpindao_erji_fenlei_02" href="#">
+                                    <img src="../images/icon_b_829.png">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="menuname">
+                            <a href="shangping.html" id="__AD_shipinpindao_erji_fenlei_02" class="">营养保健</a>
+                        </div>
+                    </div>
+                    <div class="listthemone l">
+                        <div class="menu-icon">
+                            <div class="iconimgshow">
+                                <a id="__AD_shipinpindao_erji_fenlei_03" href="#">
+                                    <img src="../images/icon_a_364.png">
+                                </a>
+                            </div>
+                            <div class="iconimghover">
+                                <a id="__AD_shipinpindao_erji_fenlei_03" href="#/">
+                                    <img src="../images/icon_b_364.png">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="menuname">
+                            <a href="shangping.html" id="__AD_shipinpindao_erji_fenlei_03" class="">休闲食品</a>
+                        </div>
+                    </div>
+                    <div class="listthemone l">
+                        <div class="menu-icon">
+                            <div class="iconimgshow">
+                                <a id="__AD_shipinpindao_erji_fenlei_04" href="#">
+                                    <img src="../images/icon_a_959.png">
+                                </a>
+                            </div>
+                            <div class="iconimghover">
+                                <a id="__AD_shipinpindao_erji_fenlei_04" href="#">
+                                    <img src="../images/icon_b_959.png">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="menuname">
+                            <a href="shangping.html" id="__AD_shipinpindao_erji_fenlei_04" class="">粮油干货</a>
+                        </div>
+                    </div>
+                    <div class="listthemone l">
+                        <div class="menu-icon">
+                            <div class="iconimgshow">
+                                <a id="__AD_shipinpindao_erji_fenlei_05" href="#">
+                                    <img src="../images/icon_a_822.png">
+                                </a>
+                            </div>
+                            <div class="iconimghover">
+                                <a id="__AD_shipinpindao_erji_fenlei_05" href="#">
+                                    <img src="../images/icon_b_822.png">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="menuname">
+                            <a href="shangping.html" id="__AD_shipinpindao_erji_fenlei_05">酒水茶饮</a>
+                        </div>
+                    </div>
+                    <div class="listthemone l">
+                        <div class="menu-icon">
+                            <div class="iconimgshow">
+                                <a id="__AD_shipinpindao_erji_fenlei_06" href="#">
+                                    <img src="../images/icon_a_1245.png">
+                                </a>
+                            </div>
+                            <div class="iconimghover">
+                                <a id="__AD_shipinpindao_erji_fenlei_06" href="#">
+                                    <img src="../images/icon_b_1245.png">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="menuname">
+                            <a href="shangping.html" id="__AD_shipinpindao_erji_fenlei_06">生鲜食品</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                   </div>
+               </div>
+            </div>
+
+
+
+         </div>
+
+     </div>
+    
+    
+
+    
+
+                <!--右侧漂浮 s-->
+        <div class="sidebar-out">
+        </div>
+        <div class="sidebar">
+            <ul class="bar-top">
+                <li class="fly-user">
+                    <div class="user-c" id="_AD_right_my">
+                        <a class="a-user-c a-sidebar">
+                        </a>
+                        <div class="sidebarcom-hover">
+                            <a class="closex">
+                            </a>
+                            <div class="slide-login" id="left_user_info">
+                                
+                                <!--登录前-->
+                            </div>
+                            <p class="slide-login-go">
+                                <a href="java:void(0);" class="a-mydd">
+                                    我的订单
+                                </a>
+                                <a href="java:void(0);" class="a-myyhq">
+                                    优惠券
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="fly-cart">
+                    <div class="cart-c" id="_AD_right_shoppingcart">
+                        <a class="a-cart-c  a-sidebar">
+                        </a>
+                        <em class="cart-num" id="cart_num_2">
+                            0
+                        </em>
+                        <p class="slide-hui">
+                            <a href="car.html">
+                                购物车
+                            </a>
+                        </p>
+                    </div>
+                </li>
+                <li class="fly-care">
+                    <div class="care-c" id="_AD_right_care">
+                        <a class="a-care-c  a-sidebar">
+                        </a>
+                        <p class="slide-hui">
+                            <a href="#">
+                                我的关注
+                            </a>
+                        </p>
+                    </div>
+                </li>
+                <li class="fly-ser">
+                    <div class="ser-c" id="_AD_right_im">
+                        <a class="a-ser-c a-sidebar">
+                        </a>
+                        <p class="slide-hui">
+                            <a href="javascript:void(0)" onclick="NTKF.im_openInPageChat()">
+                                在线客服
+                            </a>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="bar-bot">
+                <li class="fly-code hover">
+                    <div class="code-c">
+                        <a class="a-code-c a-sidebar">
+                        </a>
+                        <p class="code-pic">
+                            <a href="java:void(0);" >
+                                <img alt="优品惠手机APP" src="../picture/code.jpg" width="132" height="182" />
+                            </a>
+                        </p>
+                    </div>
+                </li>
+                <li class="fly-ask">
+                    <div class="ask-c" id="_AD_right_feedback">
+                        <a class="a-ask-c a-sidebar">
+                        </a>
+                        <p class="slide-hui">
+                            <a href="#">
+                                调查问卷
+                            </a>
+                        </p>
+                    </div>
+                </li>
+                <li class="fly-return">
+                    <div class="return-c" id="_AD_right_top">
+                        <a class="a-return-c a-sidebar">
+                        </a>
+                        <p class="slide-hui">
+                            <a>
+                                返回顶部
+                            </a>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+
+
+
 
 
     <div id="footerBottom"></div>

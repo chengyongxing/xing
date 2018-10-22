@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <title>Document</title>
+    <title>注册</title>
     <link rel="stylesheet" type="text/css" href="../css/public.css" />
-    <link rel="stylesheet" type="text/css" href="../css/denglu.css" />
+    <link rel="stylesheet" type="text/css" href="../css/zuce.css" />
     <script type="text/javascript" src="../lib/jquery-3.2.1.js"></script>
     <script type="text/javascript" src="../js/common.js"></script>
-    <script type="text/javascript" src="../js/denglu.js"></script>
+    <script type="text/javascript" src="../js/zuce.js"></script>
 </head>
 <body>
     <div class="top-nav borbot" style="display:block">
@@ -59,7 +59,179 @@
         </ul>
         </div>
     </div>
-    
+    <!-- ====================== -->
+    <div class="welland">
+    <img src="../images/logEWM.gif" class="EWM">
+<!--LOGO-->
+  <div class="land_logo">
+     <div class="l land_logo_img">
+        <a class="l" href="../index.html"></a>
+        <span class="l"></span>
+     </div>
+     <p class="r kefuphonenum">已注册，请<a href="denglu.html">登录</a></p>
+  </div> 
+
+  <div class="regnav">
+     <ul>
+        <li class="regnav1 on"><span class="icon4">注册/TV激活</span></li>
+     </ul>
+     <label class="regnav_tips">如有疑问请点击<a class="cg" href="#">帮助中心</a>，或拨打客服热线：<em>400-707-0707</em></label>
+ </div>                  
+<!--LOGO  OVER-->
+<!--框内开始-->
+  <div class="land_con clearfix" id="land">
+     <!--left-->
+     <div class="l land_con_l">
+         <form action="" method="get">
+             <div class="land_item">
+                    <span>手机号码：</span>
+                    <div class="item-ifo yz1">
+                        <input type="text" class="yhm_text text1" id="yz_user" value="" placeholder="请输入手机号码">
+                        <div id="acnum" class="i-name land_ico"></div>
+                     
+                    </div>                   
+              </div>
+              <div class="land_item">
+                    <span> 验证码 ：</span>
+                    <div class="item-ifo yz1">
+                        <input type="text" id="yz_yanz" value="" placeholder="请输入验证码">
+                        <input type="button" id="yz_yy" />
+                        看不清，<a href="#">换一张</a>
+                    </div>          
+              </div>
+            <div class="land_item"> 
+                 <span>设置密码：</span>
+                 <div class="item-ifo yz2">
+                     <input type="password" class="yhm_text text2" id="yz_user1" value="" placeholder="请输入密码">
+                      <div id="ladpasw" class="i-name land_ico2"></div>
+                 </div>
+            </div> 
+            <div class="land_item"> 
+                 <span>确认密码：</span>
+                 <div class="item-ifo yz2">
+                     <input type="password" class="yhm_text text2" id="yz_user2" value="" placeholder="再次输入密码">
+                      <div id="ladpasw" class="i-name land_ico2"></div>
+                 </div>
+            </div> 
+            <div class="land_item2">
+               <input type="checkbox" class="checkbox l" value="get_pass" id="get_pass">
+               <label class="l mjy">我已阅读并同意<a href="#"></a>《优品惠用户服务承诺》</label>
+            </div>
+            <input type="hidden" value="" id="code_three">
+           <div class="login-btn">
+              <input type="button" class="btn-img" value="" id="button">
+           </div>
+           <div class="login_tips">
+               <p>温馨提示：</p>
+               
+                   优品惠升级为电视购物大全，其中收录了优购物、时尚购物等多家优质购物频道，您可以选购更多优质商品，欢迎您的光临！
+                 
+            </div>
+         </form>
+     </div>
+  </div>
+<!--框内结束-->
+</div>
+                <!--右侧漂浮 s-->
+        <div class="sidebar-out">
+        </div>
+        <div class="sidebar">
+            <ul class="bar-top">
+                <li class="fly-user">
+                    <div class="user-c" id="_AD_right_my">
+                        <a class="a-user-c a-sidebar">
+                        </a>
+                        <div class="sidebarcom-hover">
+                            <a class="closex">
+                            </a>
+                            <div class="slide-login" id="left_user_info">
+                                
+                                <!--登录前-->
+                            </div>
+                            <p class="slide-login-go">
+                                <a href="java:void(0);" class="a-mydd">
+                                    我的订单
+                                </a>
+                                <a href="java:void(0);" class="a-myyhq">
+                                    优惠券
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="fly-cart">
+                    <div class="cart-c" id="_AD_right_shoppingcart">
+                        <a class="a-cart-c  a-sidebar">
+                        </a>
+                        <em class="cart-num" id="cart_num_2">
+                            0
+                        </em>
+                        <p class="slide-hui">
+                            <a href="car.html">
+                                购物车
+                            </a>
+                        </p>
+                    </div>
+                </li>
+                <li class="fly-care">
+                    <div class="care-c" id="_AD_right_care">
+                        <a class="a-care-c  a-sidebar">
+                        </a>
+                        <p class="slide-hui">
+                            <a href="#">
+                                我的关注
+                            </a>
+                        </p>
+                    </div>
+                </li>
+                <li class="fly-ser">
+                    <div class="ser-c" id="_AD_right_im">
+                        <a class="a-ser-c a-sidebar">
+                        </a>
+                        <p class="slide-hui">
+                            <a href="javascript:void(0)" onclick="NTKF.im_openInPageChat()">
+                                在线客服
+                            </a>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="bar-bot">
+                <li class="fly-code hover">
+                    <div class="code-c">
+                        <a class="a-code-c a-sidebar">
+                        </a>
+                        <p class="code-pic">
+                            <a href="java:void(0);" >
+                                <img alt="优品惠手机APP" src="../picture/code.jpg" width="132" height="182" />
+                            </a>
+                        </p>
+                    </div>
+                </li>
+                <li class="fly-ask">
+                    <div class="ask-c" id="_AD_right_feedback">
+                        <a class="a-ask-c a-sidebar">
+                        </a>
+                        <p class="slide-hui">
+                            <a href="#">
+                                调查问卷
+                            </a>
+                        </p>
+                    </div>
+                </li>
+                <li class="fly-return">
+                    <div class="return-c" id="_AD_right_top">
+                        <a class="a-return-c a-sidebar">
+                        </a>
+                        <p class="slide-hui">
+                            <a>
+                                返回顶部
+                            </a>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
     
 
 
