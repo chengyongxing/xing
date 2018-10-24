@@ -90,6 +90,7 @@ var Cookie = {
                     return arr[1];
                 }
             }
+            return "";
         }
     },
     removeCookie : function(name,value,path){

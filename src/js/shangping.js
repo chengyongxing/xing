@@ -1,11 +1,17 @@
 jQuery(function($){
-        $('#pageHeader').load('../html/top.html',function(){
+    $('#pageHeader').load('../html/top.html',function(){
+        $("#guding input").on("click",function(){
+                location.href = "./car.html";
+            })
+            $(".a-cart-c.a-sidebar").on("click",function(){
+                location.href = "./car.html";
+            })
                    //用户名&密码
             admin();
             function admin(){
                var admin = Cookie.getCookie('admin');
                 var $zhanghu = $(".top-nav-tool");
-                if(admin === ''){
+                if(admin === '' || admin == undefined){
                     let cii = `<li class="yg-card">
                                 <span>
                                     <a href="zuce.html" id="__AD_head_zhuce" rel="nofollow">
@@ -28,45 +34,84 @@ jQuery(function($){
                                 <span>
                                     欢迎您 ， ${admin}
                                 </span>
-                            </li>
-                             <li class="yg-card">
-                                <span>
-                                    <a href="./shangping.html">
-                                        退出
-                                    </a>
-                                </span>
-                                |
-                            </li>
-                             `;
+                                </li>
+                                 <li class="yg-card">
+                                    <span>
+                                        <a href="./shangping.html">
+                                            退出
+                                        </a>
+                                    </span>
+                                    |
+                                </li>`;
                         $zhanghu.prepend(cii);
+
+                        $.ajax({
+                            type : "get",
+                            datatype : "json",
+                            data : {admin :admin},
+                            url : "../api/addcar.php",
+                            success : function(data){
+                                if(data != ""){
+                                    let jiage =0;
+                                    let shulian = 0;
+                                    var Ydata = JSON.parse(data);
+                                    Ydata.forEach(function(item){
+                                         jiage += (item.price-0)*(item.qty-0);
+                                         shulian += (item.qty-0);
+                                         let str = `<div class="dadada clearfix">
+                                                        <span class="immg"><img src = "${item.img}"/></span>
+                                                        <span class="dmmg">${item.wenzi}</span>
+                                                        <span class="pmmg">￥${item.price}x${item.qty}</span>
+                                                    </div>
+
+                                                    `
+                                        $("#cartlist").append(str);
+                                        $("#cartlist .none_cart").remove();
+                                        $("#guding").css("display","block");
+
+                                    })
+                                    $("#guding").children().first().html(shulian);
+                                    $("#guding").children("span").last().html(jiage);
+                                    $("#cart_num_2").html(shulian);
+                                    $("#cart_num_1").html(shulian);
+
+                                }
+                                
+                            }
+                        })
                     }
                 }
                 $($(".yg-card")[1]).on("click",function(e){
                         if(e.target.tagName.toLowerCase()=="a");
-                            Cookie.removeCookie('admin');
+                            var admin = Cookie.getCookie('admin');
+                            Cookie.removeCookie('admin',admin,"/");
                             $($(".yg-card")[1]).remove();
                             $($(".yg-card")[0]).remove();
                             admin();
-                    
                 })
+                if($("#guding").children().first().html()==""){
+                    $("#guding").css("display","none");
+                }else{
+                    $("#guding").css("display","block");
+                }
 
 
                     //购物车
-    $(".mycart").on("mouseover",function(){
-        $(".mycart .cart-bag").addClass("active");
-        $(".mycart .cart-info").css("display","block");
-    })
-    $(".mycart").on("mouseout",function(){
-        $(".mycart .cart-bag").removeClass("active");
-        $(".mycart .cart-info").css("display","none");
-    })
+        $(".mycart").on("mouseover",function(){
+            $(".mycart .cart-bag").addClass("active");
+            $(".mycart .cart-info").css("display","block");
+        })
+        $(".mycart").on("mouseout",function(){
+            $(".mycart .cart-bag").removeClass("active");
+            $(".mycart .cart-info").css("display","none");
+        })
 
                 //
                 //=====================================
                   //侧边用户  购物车
                 cebian();
                 function cebian(){
-                   var admin = Cookie.getCookie('admin');
+                    var admin = Cookie.getCookie('admin');
                     var $xslideLogin = $(".sidebarcom-hover .slide-login");
                     if(admin === ''){
                         let cii = `<a href="#" class="slide-pic">
@@ -97,13 +142,13 @@ jQuery(function($){
                                         </a>
                                             </p> `;
                             $xslideLogin.prepend(cii);
-                        }
                     }
-                    $($(".slide-login-btn a")).on("click",function(){
-                                Cookie.removeCookie('admin');
-                                cebian();
-                        
-                    })
+                }
+                $($(".slide-login-btn a")).on("click",function(){
+                            Cookie.removeCookie('admin');
+                            cebian();
+                    
+                })
                 $(".sidebar .bar-top").on("mouseover",function(e){
                     if(e.target.tagName.toLowerCase() == "a"){
                         $(e.target).closest("li").addClass("hover");
@@ -128,7 +173,7 @@ jQuery(function($){
                         window.scrollTo(0, $huadongy)
                     },30);
                 })
-            });
+    });
 //========头部结束=============
     //商品分类头部，移动时高亮
     $(".menu-icon").on("mouseover",function(){

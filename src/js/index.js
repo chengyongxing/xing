@@ -1,64 +1,123 @@
  jQuery(function($){
+    $("#guding input").on("click",function(){
+        location.href = "./html/car.html";
+    })
+    $(".a-cart-c.a-sidebar").on("click",function(){
+        location.href = "./html/car.html";
+    })
+    var data = Cookie.setCookie("xinXi",data);
+    Cookie.removeCookie("xinXi",data,"/git/xing/src/html");
+                                    
     //用户名&密码
     // Cookie.setCookie("admin",12)
     admin();
-    function admin(){
-       var admin = Cookie.getCookie('admin');
-        var $zhanghu = $(".top-nav-tool");
-        if(admin === ''){
-            let cii = `<li class="yg-card">
-                        <span>
-                            <a href="./html/zuce.html" id="__AD_head_zhuce" rel="nofollow">
-                                注册
-                            </a>
-                        </span>|
-                            </li>
-                            <li class="yg-card">
+            function admin(){
+               var admin = Cookie.getCookie('admin');
+               console.log(admin);
+                var $zhanghu = $(".top-nav-tool");
+                if(admin === ''){
+                    let cii = `<li class="yg-card">
                                 <span>
-                                    <a href="./html/denglu.html" id="__AD_head_denglu" rel="nofollow">
-                                        登录
+                                    <a href="./html/zuce.html" id="__AD_head_zhuce" rel="nofollow">
+                                        注册
                                     </a>
+                                </span>|
+                                    </li>
+                                    <li class="yg-card">
+                                        <span>
+                                            <a href="./html/denglu.html" id="__AD_head_denglu" rel="nofollow">
+                                                登录
+                                            </a>
+                                        </span>
+                                        |
+                                    </li>`;
+                        $zhanghu.prepend(cii);
+                    return;
+                }else {
+                    let cii = `<li class="yg-card">
+                                <span>
+                                    欢迎您 ， ${admin}
                                 </span>
-                                |
-                            </li>`;
-                $zhanghu.prepend(cii);
-            return;
-        }else {
-            let cii = `<li class="yg-card">
-                        <span>
-                            欢迎您 ， ${admin}
-                        </span>
-                    </li>
-                     <li class="yg-card">
-                        <span>
-                            <a href="./index.html">
-                                退出
-                            </a>
-                        </span>
-                        |
-                    </li>
-                     `;
-                $zhanghu.prepend(cii);
-            }
-        }
-        $($(".yg-card")[1]).on("click",function(e){
-                if(e.target.tagName.toLowerCase()=="a");
-                    Cookie.removeCookie('admin');
-                    $($(".yg-card")[1]).remove();
-                    $($(".yg-card")[0]).remove();
-                    admin();
-            
+                                </li>
+                                 <li class="yg-card">
+                                    <span>
+                                        <a href="./index.html">
+                                            退出
+                                        </a>
+                                    </span>
+                                    |
+                                </li>`;
+                        $zhanghu.prepend(cii);
+
+                        $.ajax({
+                            type : "get",
+                            datatype : "json",
+                            data : {admin :admin},
+                            url : "api/addcar.php",
+                            success : function(data){
+                                if(data != ""){
+                                    //把商品存进cookie
+                                    // console.log(data);
+                                    Cookie.removeCookie("xinXi");
+                                    Cookie.setCookie("xinXi",data);
+                                    //
+                                    let jiage =0;
+                                    let shulian = 0;
+                                    var Ydata = JSON.parse(data);
+                                    Ydata.forEach(function(item){
+                                         jiage += (item.price-0)*(item.qty-0);
+                                        item.img = item.img.slice(3);
+                                        
+                                         shulian += (item.qty-0);
+                                         let str = `<div class="dadada clearfix">
+                                                        <span class="immg"><img src = "${item.img}"/></span>
+                                                        <span class="dmmg">${item.wenzi}</span>
+                                                        <span class="pmmg">￥${item.price}x${item.qty}</span>
+                                                    </div>
+
+                                                    `
+                                        $("#cartlist").append(str);
+                                        $("#cartlist .none_cart").remove();
+                                        $("#guding").css("display","block");
+
+                                    })
+                                    $("#guding").children().first().html(shulian);
+                                    $("#guding").children("span").last().html(jiage);
+                                    $("#cart_num_2").html(shulian);
+                                    $("#cart_num_1").html(shulian);
+
+                                }
+                                
+                            }
+                        })
+                    }
+                }
+                $($(".yg-card")[1]).on("click",function(e){
+                        if(e.target.tagName.toLowerCase()=="a");
+                            var admin = Cookie.getCookie('admin');
+                            Cookie.removeCookie('admin',admin,"/");
+                            $($(".yg-card")[1]).remove();
+                            $($(".yg-card")[0]).remove();
+                            // admin();
+                    
+                })
+                if($("#guding").children().first().html()==""){
+                    $("#guding").css("display","none");
+                }else{
+                    $("#guding").css("display","block");
+                }
+
+
+                    //购物车
+        $(".mycart").on("mouseover",function(){
+            $(".mycart .cart-bag").addClass("active");
+            $(".mycart .cart-info").css("display","block");
+        })
+        $(".mycart").on("mouseout",function(){
+            $(".mycart .cart-bag").removeClass("active");
+            $(".mycart .cart-info").css("display","none");
         })
 
-        //购物车
-    $(".mycart").on("mouseover",function(){
-        $(".mycart .cart-bag").addClass("active");
-        $(".mycart .cart-info").css("display","block");
-    })
-    $(".mycart").on("mouseout",function(){
-        $(".mycart .cart-bag").removeClass("active");
-        $(".mycart .cart-info").css("display","none");
-    })
 
     //轮播图
     $(document).ready(function(e) {
@@ -143,6 +202,7 @@
                             chuandi[n].index = n; 
                             chuandi[n].onclick = function(){
                                 n = this.index ;
+                                data.dataArr[n]["img"] = "../" + data.dataArr[n]["img"];
                                 for(var key in data.dataArr[n]){
                                     params += key + "=" + data.dataArr[n][key] + "&";
                                 }

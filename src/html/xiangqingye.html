@@ -2,19 +2,133 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <title>Document</title>
+    <title>商品详情</title>
     <link rel="stylesheet" type="text/css" href="../css/public.css" />
+    <link rel="stylesheet" type="text/css" href="../css/xiangqingye.css" />
     <script type="text/javascript" src="../lib/jquery-3.2.1.js"></script>
     <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../lib/jquery-fangdajing/jquery-1.8.2.js"></script>
+    <script type="text/javascript" src="../lib/jquery-fangdajing/xq_bigimg.js"></script>
     <script type="text/javascript" src="../js/xiangqingye.js"></script>
 </head>
 <body>
     <header id="pageHeader"></header>
     
+    <div class="webz">
+        <div class="sh-crumbs">
+        当前位置： 
+            <a href="../index.html">首页</a> 
+            <code>&gt;</code> 
+            <a href="shangping.html">美食</a> 
+            <code>&gt;</code> 
+            <a href="shangping.html" title="休闲食品">休闲食品</a> 
+            <code>&gt;</code> 
+            <a href="shangping.html" title="熟食腊味">熟食腊味</a> 
+            <code>&gt;</code>
+        </div>
+        
+        <div class="sh-goods-key clearfix"> 
+           <div class="sh-goods-gallery"> 
+            <div id="preview" class="preview"> 
+             <span class="jqzoom">
+                 <img xq_big="true" setting='{"pwidth":400,"pheight":400,"margin_top":200,"margin_left":120}'/>
+             </span> 
+             <i class="lens"><a href="#"></a></i> 
+             <div class="sale-out"></div> 
+             <div class="bqtv t"></div>
+            </div> 
+            <div class="jqzoom-scroll clearfix"> 
+             <a class="prev disabled"></a> 
+             <a class="next"></a> 
+             <div class="items"> 
+              <ul> 
+               
+              </ul> 
+             </div> 
+            </div> 
+            <div class="sh-goods-share clearfix"> 
+             <input type="hidden" id="goods_id" value="129197" /> 
+             <input type="hidden" id="goods_cid" value="424" /> 
+             <input type="hidden" id="first_cat" value="美食" /> 
+             <div class="no">
+              商品货号：588289_001
+             </div> 
+            </div> 
+           </div> 
+           <div class="sh-goods-parameters"> 
+            <form action="#"> 
+             <div class="brand clearfix"> 
+              <span class="country-brand"> <a target="_blank" alt="东来顺" title="优品惠东来顺" href="#">东来顺</a> </span> 
+             </div> 
+             <h1 class="title">  </h1> 
+             <div class="description">
+               
+             </div> 
+             <div class="price-box"> 
+              <ul class="a-good-infos">
+               <li class="mb"> <span class="label price-label" data-attr="0" data-attrh="0">价格</span> </li>
+               <li><span class="label">优惠</span>
+                <div>
+                 <p><span class="tag">立减</span><span>TV商品下单立减10元</span></p>
+                 <p><span class="tag">包邮</span><span>订单金额满168元包邮</span></p>
+                </div></li>
+              </ul> 
+             </div> 
+             <div class="choice-buy"> 
+              <input type="hidden" name="prodJson" value="{&quot;color0_style0&quot;:588289101}" /> 
+              <dl class="sendto clearfix"> 
+               <dt>
+                送至
+               </dt> 
+               <input type="hidden" id="default_adder_id" value="" /> 
+               <dd class="clearfix"> 
+                <div class="store-select"> 
+                 <span class="text">广东广州从化市</span>
+                 <i class="store-a"></i> 
+                 <div class="content" style="display: none;"> 
+                  <ul class="mt"> 
+                   <li class=""><a href="#none"><em>广东</em><i></i></a></li> 
+                   <li style=""><a href="#none"><em>广州</em><i></i></a></li> 
+                   <li style="" class="curr"><a href="#none"><em>从化市</em><i></i></a></li> 
+                  </ul> 
+                  <i class="cls"></i> 
+                 </div> 
+                </div> 
+                <div class="xdljfa"> 
+                 <span style="display: block;"><em>有货</em></span> 
+                </div> 
+               </dd> 
+              </dl>               
+              <dl class="number clearfix"> 
+               <dt>
+                数量
+               </dt> 
+               <dd id="goodsNumber"> 
+                <div class="box"> 
+                 <a href="javascript:;" id="lessBtn" class="hh">-</a> 
+                 <input class="l" id="goodsNumberInput" type="text" value="1" /> 
+                 <a href="javascript:;" id="addBtn" class="">+</a> 
+                </div> 
+                <span class="err-info" id="errNum" style="display: none;"><i></i>最少购买1件</span>
+               </dd> 
+              </dl> 
+             </div> 
+             <div class="add-cart"> 
+              <button type="button" class="sh-shopping-cart"><i></i>加入购物车</button> 
+              <p class="ugo_gw_zg">TV商品 <a href="#">此商品由 <i>优购物官方直营店</i> 发货，提供售后服务</a></p> 
+             </div> 
+            </form> 
+           </div> 
+          </div>
+    </div>
+
+
+  
 
 
 
-    
+
+
                 <!--右侧漂浮 s-->
         <div class="sidebar-out">
         </div>
@@ -86,7 +200,7 @@
                         </a>
                         <p class="code-pic">
                             <a href="java:void(0);" >
-                                <img alt="优品惠手机APP" src="../picture/code.jpg" width="132" height="182" />
+                                <img alt="优品惠手机APP" src="../picture/code.jpg" width="100" height="200" />
                             </a>
                         </p>
                     </div>

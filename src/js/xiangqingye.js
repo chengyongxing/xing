@@ -1,5 +1,11 @@
 jQuery(function($){
      $('#pageHeader').load('../html/top.html',function(){
+            $("#guding input").on("click",function(){
+                location.href = "./car.html";
+            })
+            $(".a-cart-c.a-sidebar").on("click",function(){
+                location.href = "./car.html";
+            })
                    //用户名&密码
             admin();
             function admin(){
@@ -31,7 +37,7 @@ jQuery(function($){
                             </li>
                              <li class="yg-card">
                                 <span>
-                                    <a href="./shangping.html">
+                                    <a href="../index.html">
                                         退出
                                     </a>
                                 </span>
@@ -39,16 +45,48 @@ jQuery(function($){
                             </li>
                              `;
                         $zhanghu.prepend(cii);
+
+                        var xinXi = Cookie.getCookie('xinXi');
+                        var YxinXi = JSON.parse(xinXi);
+                        var jiage = 0;
+                        var shulian = 0;
+                        YxinXi.forEach(function(item){
+                            jiage += (item.price-0)*(item.qty-0);
+                             shulian += (item.qty-0);
+                             let str = `<div class="dadada clearfix">
+                                            <span class="immg"><img src = "${item.img}"/></span>
+                                            <span class="dmmg">${item.wenzi}</span>
+                                            <span class="pmmg">￥${item.price}x${item.qty}</span>
+                                        </div>
+
+                                        `
+                            $("#cartlist").append(str);
+                            $("#cartlist .none_cart").remove();
+                            $("#guding").css("display","block");
+
+                        })
+                        $("#guding").children().first().html(shulian);
+                        $("#guding").children("span").last().html(jiage);
+                        $("#cart_num_2").html(shulian);
+                        $("#cart_num_1").html(shulian);
+
                     }
+
                 }
                 $($(".yg-card")[1]).on("click",function(e){
                         if(e.target.tagName.toLowerCase()=="a");
-                            Cookie.removeCookie('admin');
+                            var admin = Cookie.getCookie('admin');
+                            Cookie.removeCookie('admin',admin,"/");
                             $($(".yg-card")[1]).remove();
                             $($(".yg-card")[0]).remove();
                             admin();
                     
                 })
+                if($("#guding").children().first().html()==""){
+                    $("#guding").css("display","none");
+                }else{
+                    $("#guding").css("display","block");
+                }
 
 
                     //购物车
@@ -145,5 +183,139 @@ jQuery(function($){
         var arr = item.split("=");
         paramsObj[arr[0]] = arr[1];
     });
-    console.log(paramsObj);
+    // console.log(paramsObj);
+
+
+//==========渲染========
+     $('<span>"'+paramsObj.wenzi+'"</span>').appendTo($('.sh-crumbs'));
+    $('<span>"'+paramsObj.wenzi+'"</span>').appendTo($(".sh-goods-parameters h1"));
+    $('<span>"'+paramsObj.subtit+'"</span>').appendTo($(".sh-goods-parameters .description"));
+    $('<span class="price" alt="'+paramsObj.price+'" id="rel_price"><i>￥</i>'+paramsObj.price+'</span>').appendTo($(".price-box .mb"));
+
+    ($("#preview .jqzoom img")).attr("src",""+paramsObj.img+"");
+
+    for(var i=1;i<6;i++){
+        $('<li><img alt="'+paramsObj.wenzi
++'" title="'+paramsObj.subtit+'" src="'+paramsObj.img+'"/></li>').appendTo($(".items ul"));
+    }
+//高亮
+    $(".items ul").children('li').first().addClass('active');
+    $(".items ul").on("mouseover",function(e){
+        $(".items ul li").removeClass('active');
+        if(e.target.tagName == "IMG"){
+            $(e.target).closest("li").addClass("active");
+        }
+    })
+
+
+
+    //qty  避免点一次相当于点几次情况unbind('click').bind("click"
+    // console.log($("#goodsNumber .box"))
+    let nmm = $("#goodsNumber .box #lessBtn").next().val();
+    if(nmm <= 1){
+        $("#goodsNumber .box #lessBtn").addClass("limit");
+    }else{
+        $("#goodsNumber .box #lessBtn").removeClass("limit");
+    }
+    $("#goodsNumber .box").unbind('click').bind("click",function(e){
+        let Num;
+        if(e.target.className == "hh"){
+            Num = $(e.target).next().val();
+            if(Num <= 2){
+                $(e.target).addClass("limit");
+            }
+            Num--;
+            $(e.target).next().attr("value",""+Num+"");
+        }
+        if(e.target.className == ""){
+            Num = $(e.target).prev().val();
+            if(Num >= 1){
+                $("#goodsNumber .box #lessBtn").removeClass("limit");
+            }
+            Num++;
+            $(e.target).prev().attr("value",""+Num+"");
+        }
+    })
+
+// =======================点击添加到购物车=======
+    $(".sh-shopping-cart").on("click",function(){
+                        //加入购物车动画
+        let $fuzi = $(".jqzoom").children("img").first().clone();
+        $fuzi.prependTo($(".jqzoom"));
+        $fuzi.addClass("clone-img");
+        var $weishao = $(".jqzoom").offset();
+        var $weidao = $(".a-cart-c.a-sidebar").offset();
+        console.log($weidao);
+        $fuzi.animate({left:$weidao.left-150,top:$weidao.top-200,width:0,height:0},1000,function(){
+            $fuzi.remove();
+        })
+
+
+        let admin = Cookie.getCookie('admin');
+        if(admin == ""){
+            alert("请先登录");
+        }else{
+            let qty = $("#goodsNumber .box #lessBtn").next().val() -0;
+            paramsObj["qty"]=qty;
+            let kkk = JSON.parse(Cookie.getCookie("xinXi"));
+            let iii = [];
+            kkk.forEach(function(item){
+                iii.push(item.id);
+            })
+            if(iii.indexOf(paramsObj.id) != -1){
+                kkk.forEach(function(item){
+                    if(item.id==paramsObj.id){
+                        item.qty = (item.qty-0)+(paramsObj.qty-0);
+                        let bbb = JSON.stringify(kkk);
+                        Cookie.setCookie("xinXi",bbb);
+                    }
+                })
+            }else{
+                kkk.push(paramsObj);
+                let bbb = JSON.stringify(kkk);
+                Cookie.setCookie("xinXi",bbb);
+            }
+            $(".dadada").remove();
+            var jiage1 = 0;
+            var shulian1 = 0;
+            kkk.forEach(function(item){
+                jiage1 += (item.price-0)*(item.qty-0);
+                 shulian1 += (item.qty-0);
+                 let str = `<div class="dadada clearfix">
+                                <span class="immg"><img src = "${item.img}"/></span>
+                                <span class="dmmg">${item.wenzi}</span>
+                                <span class="pmmg">￥${item.price}x${item.qty}</span>
+                            </div>
+
+                            `
+                $("#cartlist").append(str);
+                $("#cartlist .none_cart").remove();
+                $("#guding").css("display","block");
+
+            })
+            $("#guding").children().first().html(shulian1);
+            $("#guding").children("span").last().html(jiage1);
+            $("#cart_num_2").html(shulian1);
+            $("#cart_num_1").html(shulian1);
+            
+            // admin();
+            // console.log(kkk)
+            
+            $.ajax({
+                type : "GET",
+                url : "../api/xiangqingye.php",
+                data : {admin:admin,id:paramsObj["id"],qty:qty,img:paramsObj["img"],wenzi:paramsObj["wenzi"],subtit:paramsObj["subtit"],price:paramsObj["price"],linePrice:paramsObj["linePrice"],purchased:paramsObj["purchased"],timer:paramsObj["timer"]},
+                dataType : "json",
+                success : function(data){
+                    if(data == true){
+                        
+                    }
+                }
+            })
+        }
+        
+    })
+   
+
+
 })

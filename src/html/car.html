@@ -1,8 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-    </head>
-    <body>
-    </body>
+<head>
+    <meta charset="UTF-8" />
+    <title>购物车</title>
+    <link rel="stylesheet" type="text/css" href="../css/public.css" />
+    <link rel="stylesheet" type="text/css" href="../css/car.css" />
+    <script type="text/javascript" src="../lib/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/car.js"></script>
+</head>
+<body>
+    <div id="hhh"></div>
+    <div id="pageHeader"></div>
+    <div class="classify">
+        <div class="classify-con">
+            <div id="ttop">
+                <a href="../index.html">
+                    <img src="../picture/logo.png" height="46" width="206" alt="" />
+                </a>
+                <img src="../images/toop1.png" height="80" width="434" alt="" />
+            </div>
+
+            <div id="gouwu">
+                <h2></h2>
+                <h5>我的购物车</h5>
+                <table class="datalist">
+                    <thead>
+                        <tr>
+                            <th width="20"><input type="checkbox" class="all"></th>
+                            <th width="30">全选</th>
+                            <th>商品信息</th>
+                            <th>单价（元）</th>
+                            <th>数量</th>
+                            <th>小计（元）</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <div class="cccc">
+                                   共<span>0</span> 件商品&nbsp;商品金额：
+                                </div>
+                                <div class="ccc">
+                                    优惠金额：
+                                </div>
+                                <div class="cc">
+                                    实付金额：
+                                </div>
+                            </td>
+                            <td>
+                                <div class="bbbb">
+                                    ￥<span>0</span>
+                                </div>
+                                <div class="bbb">
+                                    -￥<span>0</span>
+                                </div>
+                                <div class="bb">
+                                    ￥<span>0</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="50"><input type="checkbox" name="check" class="all">全选</td>
+                            
+                            <td></td>
+                            <td width="50" class="aa">
+                                <span class="sahnchu1">&times;</span>删除
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><input type="button" value="立即结算" id="genxin" /></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    
+                <!--右侧漂浮 s-->
+        <div class="sidebar-out">
+        </div>
+        <div class="sidebar">
+            <ul class="bar-top">
+                <li class="fly-user">
+                    <div class="user-c" id="_AD_right_my">
+                        <a class="a-user-c a-sidebar">
+                        </a>
+                        <div class="sidebarcom-hover">
+                            <a class="closex">
+                            </a>
+                            <div class="slide-login" id="left_user_info">
+                                
+                                <!--登录前-->
+                            </div>
+                            <p class="slide-login-go">
+                                <a href="java:void(0);" class="a-mydd">
+                                    我的订单
+                                </a>
+                                <a href="java:void(0);" class="a-myyhq">
+                                    优惠券
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="fly-cart">
+                    <div class="cart-c" id="_AD_right_shoppingcart">
+                        <a class="a-cart-c  a-sidebar">
+                        </a>
+                        <em class="cart-num" id="cart_num_2">
+                            0
+                        </em>
+                        <p class="slide-hui">
+                            <a href="car.html">
+                                购物车
+                            </a>
+                        </p>
+                    </div>
+                </li>
+                <li class="fly-care">
+                    <div class="care-c" id="_AD_right_care">
+                        <a class="a-care-c  a-sidebar">
+                        </a>
+                        <p class="slide-hui">
+                            <a href="#">
+                                我的关注
+                            </a>
+                        </p>
+                    </div>
+                </li>
+                <li class="fly-ser">
+                    <div class="ser-c" id="_AD_right_im">
+                        <a class="a-ser-c a-sidebar">
+                        </a>
+                        <p class="slide-hui">
+                            <a href="javascript:void(0)" onclick="NTKF.im_openInPageChat()">
+                                在线客服
+                            </a>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="bar-bot">
+                <li class="fly-code hover">
+                    <div class="code-c">
+                        <a class="a-code-c a-sidebar">
+                        </a>
+                        <p class="code-pic">
+                            <a href="java:void(0);" >
+                                <img alt="优品惠手机APP" src="../picture/code.jpg" width="132" height="182" />
+                            </a>
+                        </p>
+                    </div>
+                </li>
+                <li class="fly-ask">
+                    <div class="ask-c" id="_AD_right_feedback">
+                        <a class="a-ask-c a-sidebar">
+                        </a>
+                        <p class="slide-hui">
+                            <a href="#">
+                                调查问卷
+                            </a>
+                        </p>
+                    </div>
+                </li>
+                <li class="fly-return">
+                    <div class="return-c" id="_AD_right_top">
+                        <a class="a-return-c a-sidebar">
+                        </a>
+                        <p class="slide-hui">
+                            <a>
+                                返回顶部
+                            </a>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    <div id="footerBottom"></div>
+
+</body>
 </html>

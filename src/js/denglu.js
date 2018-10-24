@@ -2,6 +2,9 @@ jQuery(function($){
     $('#footerBottom').load('../html/bottom.html',function(){
             console.log(777);
             });
+    $(".a-cart-c.a-sidebar").on("click",function(){
+        location.href = "./car.html";
+    })
 
     //用户名&密码
         admin();
@@ -67,8 +70,8 @@ jQuery(function($){
                 data : {Yname : Yname,mima : Ypass},
                 success : function(data){
                     console.log(data);
-                    data==Yname? location.href = "../html/shangping.html": alert("登录失败"); 
-                     Cookie.setCookie("admin",data);
+                    data==Yname? location.href = "../index.html": alert("登录失败"); 
+                     Cookie.setCookie("admin",data,"","/");
                      admin();
                 }
             })

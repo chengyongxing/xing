@@ -4,7 +4,41 @@
 *time :20150709
 *author:W.Xl;
 */
+#cartlist{
+    height:200px;
+    overflow:auto;
+}
+#cartlist .immg{
+    display:block;
+    float:left;
+    overflow:hidden;
 
+}
+#cartlist .immg img{
+    height:60px;
+    width:60px;
+}
+#cartlist .dmmg{
+    display:block;
+    float:left;
+    overflow:hidden;
+    width:130px;
+}
+#cartlist .pmmg{
+    display:block;
+    float:left;
+    overflow:hidden;
+    margin-left:20px;
+
+}
+#guding{
+    background:#58bc58;
+    height:60px;
+    width:100%;
+    position:absolute;
+    bottom:-60px;
+    left:0;
+}
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
 	display: block;
 }

@@ -2,6 +2,9 @@ jQuery(function($){
     $('#footerBottom').load('../html/bottom.html',function(){
             console.log(777);
             });
+    $(".a-cart-c.a-sidebar").on("click",function(){
+        location.href = "./car.html";
+    })
 
     //用户名&密码
     admin();
@@ -46,7 +49,8 @@ jQuery(function($){
         }
         $($(".yg-card")[1]).on("click",function(e){
                 if(e.target.tagName.toLowerCase()=="a");
-                    Cookie.removeCookie('admin');
+                    var admin = Cookie.getCookie('admin');
+                    Cookie.removeCookie('admin',admin,"/");
                     $($(".yg-card")[1]).remove();
                     $($(".yg-card")[0]).remove();
                     admin();
@@ -162,15 +166,16 @@ jQuery(function($){
                 var $_fal = $fal.val();
                 if(!/^1[3-9]\d{9}$/i.test($_fal)){
                     alert("你的手机号码不满足条件");
+                    $("#yz_user").val("");
                     return false;
                 }
                 var $shuzu = [];
                 for(var i=0;i<data.length;i++){
                     $shuzu.push(data[i].uname);
                 }
-                if($shuzu.indexOf($_fal) != -1){
+                if($shuzu.indexOf($_fal) != -1){                    
                     alert("用户名已存在");
-
+                    $("#yz_user").val("");
                 }
            })
         }
@@ -178,27 +183,30 @@ jQuery(function($){
 
     $con.on("blur",function(){
         if($pas.val() != $con.val()){
+            $("#yz_user2").val("");
             alert("密码不一致");
         }
     })
     $sub.on("click",function(e){
-                e.preventDefault();
-                var _con = $con.val().trim();
-                var _fal = $fal.val().trim();
-                if(_con.length >= 6){
-                    $.ajax({
-                        type : "POST",
-                        url : "../api/zuce1.php",
-                        dataType : "text",
-                        data : {fal:_fal,con:_con},
-                        success : function(data){
-                            location.href = "denglu.html"
+        e.preventDefault();
+        var _yanZm = $("#yz_yanz").val().trim();
+        var _con = $con.val().trim();
+        var _fal = $fal.val().trim();
+        if(_con.length >= 6 && _fal.length >= 1 && _yanZm.length >0){
+            $.ajax({
+                type : "POST",
+                url : "../api/zuce1.php",
+                dataType : "text",
+                data : {fal:_fal,con:_con},
+                success : function(data){
+                    alert("注册成功");
+                    location.href = "denglu.html"
 
-                            
-                        }
-                    })
-                }else{alert("密码个数不能少于六");}
+                    
+                }
             })
+        }else{alert("登录失败");}
+    })
    
     
 
