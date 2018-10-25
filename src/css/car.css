@@ -70,6 +70,7 @@
 
 .datalist tbody tr td:nth-of-type(7), .datalist tbody tr:last-of-type .aa {
   position: relative;
+  text-align: left;
 }
 
 .datalist tbody tr td:nth-of-type(7) .tong {
@@ -97,7 +98,7 @@
 .datalist tbody tr:last-of-type span {
   display: block;
   position: absolute;
-  left: -8px;
+  left: -24px;
   top: 9px;
   width: 20px;
   height: 20px;

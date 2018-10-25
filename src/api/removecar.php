@@ -12,6 +12,7 @@
     $conn = new mysqli($servername, $username, $password, $dbname);
     // 2.0 查询前设置编码，防止输出乱码
     $conn->set_charset('utf8');
+    //有id存在，说明要删除某个商品
     if($id){
         $remove =" delete from car where id=".$id." and admin='".$admin."'";
         $_remove = $conn->query($remove);
@@ -23,6 +24,7 @@
         }else{
             echo "false";
         }
+        //没有id存在，把这个用户名的所有商品都删掉
     }else{
         $remove =" delete from car where  admin='".$admin."'";
         $_remove = $conn->query($remove);

@@ -30,7 +30,7 @@
         foreach($zhi as  $item) {
                $qty+=$item["qty"];
             }  
-        $xiugai = "update car set qty='".$qty."' where id=".$id;
+        $xiugai = "update car set qty='".$qty."' where id=".$id." and admin='".$admin."'";
         $ccc = $conn->query($xiugai); 
          if ($ccc) {
             echo true;

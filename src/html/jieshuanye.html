@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>结算页</title>
+    <link rel="stylesheet" type="text/css" href="../css/public.css" />
+    <link rel="stylesheet" type="text/css" href="../css/jieshuanye.css" />
+    <script type="text/javascript" src="../lib/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/jieshuanye.js"></script>
+</head>
+<body>
+    <div id="hhh"></div>
+    <div id="pageHeader"></div>
+    <div class="classify">
+        <div class="classify-con">
+            <div id="ttop">
+                <a href="../index.html">
+                    <img src="../picture/logo.png" height="46" width="206" alt="" />
+                </a>
+                <img src="../images/toop2.png" height="80" width="434" alt="" />
+            </div>
+        </div>
+    </div>
+
+    <form name="order_form" id="order_form">
+        <!-- 确认订单 s -->
+        <div class="shop-box">
+            <div class="font18 mb10">
+                确认订单信息
+            </div>
+            <!-- 地址管理 s -->
+            <div class="room-box delive-box">
+                <div class="title-bar">
+                    选择收货地址
+                </div>
+                <input type="hidden" name="selAddr" id="selAddr">
+                <!-- 初始化创建地址 s -->
+                <div class="initialize">
+                    <div class="add-add">
+                        <!--s-->
+                        <div class="add-start">
+                            <dl>
+                                <dt>
+                                    <em>
+                                        *
+                                    </em>
+                                    收 货 人：
+                                </dt>
+                                <dd>
+                                    <div class="dd-t">
+                                        <input type="text" name="consignee" class="input-txt">
+                                    </div>
+                                    <p class="dd-b">
+                                        请填写正确的收货人
+                                    </p>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    <em>
+                                        *
+                                    </em>
+                                    收货地址：
+                                </dt>
+                                <dd>
+                                    <div class="dd-t">
+                                        <select class="selProvinces_0" id="selProvinces_0" name="province">
+                                            <option value="0">
+                                                省/直辖市
+                                            </option>
+                                            <option value="2">
+                                                北京
+                                            </option>
+                                            <option value="3">
+                                                安徽
+                                            </option>
+                                            <option value="4">
+                                                福建
+                                            </option>
+                                            <option value="5">
+                                                甘肃
+                                            </option>
+                                            <option value="6">
+                                                广东
+                                            </option>
+                                            <option value="7">
+                                                广西
+                                            </option>
+                                            <option value="8">
+                                                贵州
+                                            </option>
+                                            <option value="9">
+                                                海南
+                                            </option>
+                                            <option value="10">
+                                                河北
+                                            </option>
+                                            <option value="11">
+                                                河南
+                                            </option>
+                                            <option value="12">
+                                                黑龙江
+                                            </option>
+                                            <option value="13">
+                                                湖北
+                                            </option>
+                                            <option value="14">
+                                                湖南
+                                            </option>
+                                            <option value="15">
+                                                吉林
+                                            </option>
+                                            <option value="16">
+                                                江苏
+                                            </option>
+                                            <option value="17">
+                                                江西
+                                            </option>
+                                            <option value="18">
+                                                辽宁
+                                            </option>
+                                            <option value="19">
+                                                内蒙古
+                                            </option>
+                                            <option value="20">
+                                                宁夏
+                                            </option>
+                                            <option value="21">
+                                                青海
+                                            </option>
+                                            <option value="22">
+                                                山东
+                                            </option>
+                                            <option value="23">
+                                                山西
+                                            </option>
+                                            <option value="24">
+                                                陕西
+                                            </option>
+                                            <option value="25">
+                                                上海
+                                            </option>
+                                            <option value="26">
+                                                四川
+                                            </option>
+                                            <option value="27">
+                                                天津
+                                            </option>
+                                            <option value="28">
+                                                西藏
+                                            </option>
+                                            <option value="29">
+                                                新疆
+                                            </option>
+                                            <option value="30">
+                                                云南
+                                            </option>
+                                            <option value="31">
+                                                浙江
+                                            </option>
+                                            <option value="32">
+                                                重庆
+                                            </option>
+                                            <option value="33">
+                                                香港
+                                            </option>
+                                            <option value="34">
+                                                澳门
+                                            </option>
+                                            <option value="35">
+                                                台湾
+                                            </option>
+                                        </select>
+                                        <select class="selCities_0" id="selCities_0" name="city">
+                                            <option value="0">
+                                                市
+                                            </option>
+                                        </select>
+                                        <select class="selDistricts_0" id="selDistricts_0" name="district">
+                                            <option value="0">
+                                                区/县
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <p class="dd-b">
+                                        请填写完整的地区
+                                    </p>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    <em>
+                                        *
+                                    </em>
+                                    详细地址：
+                                </dt>
+                                <dd>
+                                    <div class="dd-t">
+                                        <input type="text" name="address" value="" placeholder="请填写详细地址" class="input-txt2">
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    <em>
+                                        *
+                                    </em>
+                                    手机号码：
+                                </dt>
+                                <dd>
+                                    <div class="dd-t">
+                                        <input type="text" name="tel" class="input-txt">
+                                    </div>
+                                    <p class="dd-b">
+                                        请填写正确的手机号码
+                                    </p>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                </dt>
+                                <dd>
+                                    <input type="button" value="保存收货地址" class="submit-btn sign-submit-btn">
+                                </dd>
+                            </dl>
+                        </div>
+                        <!--e-->
+                    </div>
+                </div>
+            </div>
+            <!-- 付款方式 s -->
+            <div class="room-box pay-way-box">
+                <div class="title-bar">
+                    选择支付方式
+                </div>
+                <!-- 付款渠道 在线 s -->
+                <div class="pay-way pay-select-bar">
+                    <div class="pay-way-in">
+                        <label>
+                            <input type="radio" name="pay-way" id="paymentToggle" value="online">
+                        </label>
+                        <p class="pay-name">
+                            在线付款
+                        </p>
+                        <p class="pay-note">
+                            支持支付宝、微信
+                        </p>
+                        <div class="paymented">
+                            <i class="pay p">
+                            </i>
+                            <span class="choose-way">
+                                选择其他平台 
+                            </span>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <!-- 付款渠道 到货 s -->
+                <div class="pay-way">
+                    <!-- 禁用货到付款 s -->
+                    <div class="pay-way-in pay-deny">
+                        <label>
+                            <input type="radio" name="pay-way" disabled="" value="1">
+                        </label>
+                        <p class="pay-name">
+                            货到付款
+                        </p>
+                        <p class="pay-note">
+                            送货上门后再付款。
+                        </p>
+                        <p class="pay-warm">
+                            ( 因为您的订单中含有不支持货到付款的商品，请您选择在线支付 )
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- 订单商品信息 s -->
+            <div class="room-box c_clearfix">
+                <div class="title-bar">
+                    订单商品信息
+                </div>
+                <div class="order_meg_tip c_clearfix">
+                    <span class="fl" style="display:none;">
+                        优惠惠 廊坊仓发货单
+                    </span>
+                    <div class="tax_tip fl" style="display:none">
+                        订单税费
+                        <i class="i_tax_tip">
+                        </i>
+                        <div class="tax_tip_con" style="display:none">
+                            <i class="i_sj">
+                            </i>
+                            <p>
+                                本商品税费10%,订单税费&lt;50免征
+                            </p>
+                        </div>
+                    </div>
+                    <a href="./car.html" class="return_link">
+                        返回购物车修改
+                    </a>
+                </div>
+                <div class="order_con">
+                    <ul class="order_con_tit c_clearfix">
+                        <li class="order_meg">
+                            商品信息
+                        </li>
+                        <li class="order_price">
+                            单价（元）
+                        </li>
+                        <li class="order_quantity">
+                            数量
+                        </li>
+                        <li class="order_sum">
+                            小计（元）
+                        </li>
+                    </ul>
+                    <!--商品 含赠品-->
+                    <div class="order_form c_clearfix">
+                        
+
+                        <div class="o_other">
+                            <div class="c_clearfix">
+                                <div class="fl">
+                    
+                                    <div class="invoice_con c_clearfix">
+                                        <div class="o_meg_tit">
+                                            其他信息：
+                                            <input type="checkbox" id="invoice" value="1" name="invoice[iname]">
+                                            <label>
+                                                发票
+                                            </label>
+                                        </div>
+                                        <div class="invoiceBox" style="display:none;">
+                                            <input type="hidden" value="1" name="invoice[inv_formal]" id="elec">
+                                            <p>
+                                                发票内容：
+                                                <label for="elec" class="pr20">
+                                                    商品明细
+                                                </label>
+                                            </p>
+                                            <div class="elec">
+                                                <div class="pages">
+                                                    <p>
+                                                        发票抬头：
+                                                        <label>
+                                                            <input type="radio" class="invoice_radio" name="invoice_radio" value="0"
+                                                            checked="checked">
+                                                        </label>
+                                                        <label>
+                                                            个人
+                                                        </label>
+                                                    </p>
+                                                    <div class="invoice_company">
+                                                        <div>
+                                                            <label>
+                                                                <input type="radio" id="invoice_company_flg" class="invoice_radio" name="invoice_radio"
+                                                                value="1">
+                                                            </label>
+                                                            <label>
+                                                                单位
+                                                            </label>
+                                                            <input type="text" class="invoice_text" name="invoice[company_inv]" id="company_inv"
+                                                            value="" placeholder="单位名称">
+                                                        </div>
+                                                        <div class="invoice_code_box">
+                                                            <input type="text" class="invoice_text" name="invoice[tax_code]" id="tax_code"
+                                                            value="" placeholder="纳税人识别号或统一社会信用代码">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="ele_phone_yes" style="display:none;">
+                                                    收票人手机：
+                                                    <span class="invoice-phone">
+                                                    </span>
+                                                    <a href="#" class="ml_30 btn-change">
+                                                        修改
+                                                    </a>
+                                                </p>
+                                                <p class="ele_phone_no">
+                                                    <span class="red">
+                                                        *
+                                                    </span>
+                                                    收票人手机：
+                                                    <input type="text" class="invoice_phone mr5" value="" name="invoice[inv_mobile]"
+                                                    placeholder="通过手机号可在发票服务平台查询">
+                                                    <span class="red-btn confirm-phone mr5">
+                                                        确认
+                                                    </span>
+                                                    <span class="red invoice_phone_err" style="display:none;">
+                                                        <i class="ico ico-deny">
+                                                        </i>
+                                                        请填写正确的手机号码
+                                                    </span>
+                                                </p>
+                                                <p class="invoice_name">
+                                                    <a href="#">
+                                                        电子发票相关问题&gt;&gt;
+                                                    </a>
+                                                </p>
+                                            </div>
+                                            <div class="invoice_note">
+                                                <h4>
+                                                    温馨提示：
+                                                </h4>
+                                                <table>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                自2017年7月1日起，购买方为企业的，索取增值税普通发票时，应向销售方提供纳税人识别号或统一社会信用代码；不符合规定的发票，不得作为税收凭证。
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--选择/-->
+                                    <!--发票状态/-->
+                                </div>
+                                <!--计算-->
+                                <div class="o_count">
+                                    <input name="cart_goods" type="hidden">
+                                    <p class="c_clearfix">
+                                        <span class="o_rt Zong">
+                                            ¥
+                                            <i class="fs_14">
+                                                723
+                                            </i>
+                                        </span>
+                                        <span class="o_lt">
+                                            商品金额：
+                                        </span>
+                                    </p>
+                                    <p class="c_clearfix">
+                                        <span class="o_rt">
+                                            ¥
+                                            <i class="fs_14">
+                                                0元(免运费)
+                                            </i>
+                                        </span>
+                                        <span class="o_lt">
+                                            运费：
+                                        </span>
+                                    </p>
+                                    <p class="c_clearfix">
+                                        <span class="o_rt point_amount">
+                                            -¥0元
+                                        </span>
+                                        <span class="o_lt">
+                                            积分抵现：
+                                        </span>
+                                    </p>
+                                    <p class="c_clearfix">
+                                        <span class="o_rt ticket_amount">
+                                            -¥0元
+                                        </span>
+                                        <span class="o_lt">
+                                            优惠：
+                                        </span>
+                                    </p>
+                                    <p class="c_clearfix">
+                                        <span class="o_rt o_paid">
+                                            ¥
+                                            <i class="fi_paid">
+                                                723
+                                            </i>
+                                        </span>
+                                        <span class="o_lt fw_b">
+                                            实付金额：
+                                        </span>
+                                    </p>
+                                    <input type="hidden" name="old_amount" value="723">
+                                    <input type="hidden" name="use_tick" value="">
+                                    <input type="hidden" name="old_reduce" value="">
+                                    <div class="c_clearfix pt20">
+                                        <input type="button" class="submit_order" value="提交订单">
+                                    </div>
+                                    <div class="c_clearfix o_deliver">
+                                        <p id="address_detail">
+                                            送至：
+                                        </p>
+                                        <p id="address_user">
+                                            收货人：
+                                        </p>
+                                    </div>
+                                </div>
+                                <!--计算/-->
+                            </div>
+                        </div>
+                        <!--其它信息/-->
+                    </div>
+                    <!--/////订单信息con///-->
+                </div>
+                <!-- 订单商品信息 e -->
+            </div>
+           
+        </div>
+    </form>
+
+
+
+
+
+        <!--右侧漂浮 s-->
+    <div class="sidebar-out">
+    </div>
+    <div class="sidebar">
+        <ul class="bar-top">
+            <li class="fly-user">
+                <div class="user-c" id="_AD_right_my">
+                    <a class="a-user-c a-sidebar">
+                    </a>
+                    <div class="sidebarcom-hover">
+                        <a class="closex">
+                        </a>
+                        <div class="slide-login" id="left_user_info">
+                            
+                            <!--登录前-->
+                        </div>
+                        <p class="slide-login-go">
+                            <a href="java:void(0);" class="a-mydd">
+                                我的订单
+                            </a>
+                            <a href="java:void(0);" class="a-myyhq">
+                                优惠券
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li class="fly-cart">
+                <div class="cart-c" id="_AD_right_shoppingcart">
+                    <a class="a-cart-c  a-sidebar">
+                    </a>
+                    <em class="cart-num" id="cart_num_2">
+                        0
+                    </em>
+                    <p class="slide-hui">
+                        <a href="car.html">
+                            购物车
+                        </a>
+                    </p>
+                </div>
+            </li>
+            <li class="fly-care">
+                <div class="care-c" id="_AD_right_care">
+                    <a class="a-care-c  a-sidebar">
+                    </a>
+                    <p class="slide-hui">
+                        <a href="#">
+                            我的关注
+                        </a>
+                    </p>
+                </div>
+            </li>
+            <li class="fly-ser">
+                <div class="ser-c" id="_AD_right_im">
+                    <a class="a-ser-c a-sidebar">
+                    </a>
+                    <p class="slide-hui">
+                        <a href="javascript:void(0)" onclick="NTKF.im_openInPageChat()">
+                            在线客服
+                        </a>
+                    </p>
+                </div>
+            </li>
+        </ul>
+        <ul class="bar-bot">
+            <li class="fly-code hover">
+                <div class="code-c">
+                    <a class="a-code-c a-sidebar">
+                    </a>
+                    <p class="code-pic">
+                        <a href="java:void(0);" >
+                            <img alt="优品惠手机APP" src="../picture/code.jpg" width="132" height="182" />
+                        </a>
+                    </p>
+                </div>
+            </li>
+            <li class="fly-ask">
+                <div class="ask-c" id="_AD_right_feedback">
+                    <a class="a-ask-c a-sidebar">
+                    </a>
+                    <p class="slide-hui">
+                        <a href="#">
+                            调查问卷
+                        </a>
+                    </p>
+                </div>
+            </li>
+            <li class="fly-return">
+                <div class="return-c" id="_AD_right_top">
+                    <a class="a-return-c a-sidebar">
+                    </a>
+                    <p class="slide-hui">
+                        <a>
+                            返回顶部
+                        </a>
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div id="footerBottom"></div>
+</body>
+</html>

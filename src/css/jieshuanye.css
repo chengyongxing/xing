@@ -1,0 +1,426 @@
+@charset "UTF-8";
+#hhh {
+  width: 100%;
+  height: 80px;
+  background: red;
+}
+
+.classify {
+  width: 100%;
+  height: 100%;
+  font-family: "微软雅黑","黑体";
+  color: #333333;
+}
+
+.classify-con {
+  width: 968px;
+  margin: 0 auto;
+}
+
+#ttop {
+  width: 100%;
+  height: 100px;
+}
+
+#ttop img {
+  margin-top: 20px;
+}
+
+#ttop a img {
+  float: left;
+}
+
+#ttop > img:nth-of-type(1) {
+  float: right;
+}
+
+#gouwu h5 {
+  height: 40px;
+  line-height: 40px;
+  font-size: 20px;
+}
+
+.shop-box {
+  width: 1000px;
+  margin: 0 auto;
+  color: #222;
+}
+
+.mb10 {
+  margin-bottom: 10px;
+}
+
+.font18 {
+  font-size: 18px;
+}
+
+.room-box {
+  border: 1px solid #e8e8e8;
+  padding: 19px;
+  margin-bottom: 10px;
+}
+
+.room-box .title-bar {
+  border-left: 3px solid #ff504a;
+  text-indent: 10px;
+  font-size: 16px;
+  color: #222;
+  height: 18px;
+  line-height: 18px;
+  margin-bottom: 20px;
+}
+
+.initialize {
+  position: static;
+  display: block;
+  color: #444;
+}
+
+.initialize .add-add {
+  margin: 27px 10px 15px 20px;
+}
+
+.initialize .add-add .add-start dl {
+  overflow: hidden;
+  padding-bottom: 10px;
+}
+
+.initialize .add-add .add-start dl dt {
+  float: left;
+  line-height: 28px;
+  height: 28px;
+  letter-spacing: 2px;
+  width: 90px;
+}
+
+.initialize .add-add .add-start dl dt em {
+  color: #f70800;
+}
+
+.initialize .add-add .dd-t {
+  height: 28px;
+}
+
+.initialize .add-add .dd-t input.input-txt {
+  width: 168px;
+  color: #444;
+}
+
+.initialize .add-add .dd-t input {
+  width: 424px;
+  height: 26px;
+  line-height: 26px;
+  border: 1px solid #ccc;
+  padding: 0 5px;
+}
+
+.initialize .add-add .dd-b {
+  padding-top: 3px;
+  line-height: 14px;
+  background: url(../../images/2016/ti.png) no-repeat 0 3px;
+  padding-left: 18px;
+  color: #ff504a;
+  display: none;
+}
+
+.initialize .add-add .dd-t select {
+  width: 140px;
+  height: 26px;
+  margin: 5px 8px 0 0;
+  float: left;
+}
+
+em, i {
+  font-style: normal;
+}
+
+.oh {
+  overflow: hidden;
+}
+
+.delive-box-in {
+  width: 975px;
+  height: 178px;
+  margin-left: -15px;
+  overflow: hidden;
+}
+
+.room-box {
+  border: 1px solid #e8e8e8;
+  padding: 19px;
+  margin-bottom: 10px;
+}
+
+.room-box .title-bar {
+  border-left: 3px solid #ff504a;
+  text-indent: 10px;
+  font-size: 16px;
+  color: #222;
+  height: 18px;
+  line-height: 18px;
+  margin-bottom: 20px;
+}
+
+.room-box .pay-way {
+  color: #444;
+  line-height: 14px;
+  font-size: 14px;
+}
+
+.room-box .pay-way .pay-way-in {
+  padding-bottom: 20px;
+}
+
+.room-box .pay-way label {
+  float: left;
+  width: 23px;
+}
+
+.room-box .pay-name {
+  width: 104px;
+  float: left;
+}
+
+.room-box .pay-note {
+  float: left;
+}
+
+.room-box .pay-way {
+  color: #444;
+  line-height: 14px;
+  font-size: 14px;
+}
+
+.room-box .pay-deny {
+  color: #999;
+}
+
+.c_clearfix {
+  zoom: 1;
+  clear: both;
+}
+
+.title-bar {
+  border-left: 3px solid #ff504a;
+  text-indent: 10px;
+  font-size: 16px;
+  color: #222;
+  height: 18px;
+  line-height: 18px;
+  margin-bottom: 20px;
+}
+
+.order_meg_tip {
+  margin-top: 20px;
+}
+
+.c_clearfix {
+  zoom: 1;
+  clear: both;
+}
+
+.return_link {
+  float: right;
+}
+
+.order_con {
+  border: 1px solid #e8e8e8;
+  margin-top: 10px;
+}
+
+.order_con .order_con_tit {
+  background-color: #f2f2f2;
+  font-size: 12px;
+  color: #666;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.order_con .c_clearfix {
+  zoom: 1;
+  clear: both;
+}
+
+.order_con_tit li {
+  float: left;
+  text-align: center;
+}
+
+.order_meg {
+  padding: 10px 0 10px 20px;
+  width: 420px;
+}
+
+.order_price {
+  width: 180px;
+  padding: 10px 0;
+}
+
+.order_quantity {
+  width: 140px;
+  padding: 10px 0;
+}
+
+.order_sum {
+  width: 180px;
+  padding: 10px 18px 10px 0;
+}
+
+.c_clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+.order_meg_con {
+  padding: 12px 18px 12px 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.o_meg {
+  float: left;
+  color: #666;
+}
+
+.o_meg dt {
+  float: left;
+  margin-right: 20px;
+}
+
+.o_meg dt img {
+  width: 58px;
+  height: 58px;
+  border: 1px solid #e8e8e8;
+}
+
+.o_meg dd {
+  padding-right: 20px;
+  width: 319px;
+  float: left;
+}
+
+.o_m_tit {
+  line-height: 18px;
+}
+
+.o_m_tit a {
+  color: #666;
+}
+
+.o_m_cor {
+  padding-top: 6px;
+}
+
+.o_price {
+  float: left;
+  width: 180px;
+  margin-top: 20px;
+  color: #666;
+  text-align: center;
+}
+
+.o_price .o_price_num {
+  line-height: 20px;
+}
+
+.o_price .o_price_num i {
+  font-size: 14px;
+  font-family: arial;
+}
+
+.o_quantity {
+  float: left;
+  text-align: center;
+  width: 140px;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.o_sum {
+  float: left;
+  width: 180px;
+  color: #666;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.o_other {
+  border-top: 1px solid #eee;
+  background: #f8f8f8;
+  padding: 15px 20px;
+}
+
+.invoice_con {
+  color: #666;
+}
+
+.o_meg_tit input {
+  margin-left: 25px;
+}
+
+input[type='checkbox'] {
+  height: 13px;
+  vertical-align: middle;
+  width: 13px;
+}
+
+.o_count {
+  width: 360px;
+  float: right;
+  color: #333;
+  padding-bottom: 20px;
+}
+
+.o_count p {
+  line-height: 22px;
+}
+
+.o_rt {
+  width: 100px;
+  display: inline-block;
+  text-align: right;
+  float: right;
+}
+
+.o_lt {
+  width: 65px;
+  text-align: right;
+  display: inline-block;
+  float: right;
+}
+
+.pt20 {
+  padding-top: 20px;
+}
+
+.submit_order {
+  float: right;
+  width: 144px;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  font-size: 16px;
+  background-color: #ff504a;
+  text-align: center;
+  border-radius: 3px;
+  border: 0;
+}
+
+.o_deliver {
+  margin-top: 15px;
+  text-align: right;
+  color: #666;
+}
+
+.o_deliver p {
+  margin-top: 5px;
+}
+
+.o_count p {
+  line-height: 22px;
+}
