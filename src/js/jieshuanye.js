@@ -52,7 +52,7 @@ jQuery(function($){
                                 let ZZong = 0;
                                 let SShu =0;
                                 Ydata.forEach(function(item){
-                                    console.log(item);
+                                    // console.log(item);
                                     let xiaoji = (item.price-0)*(item.qty-0);
                                     ZZong += xiaoji;
                                     SShu += (item.qty-0);
@@ -195,6 +195,18 @@ jQuery(function($){
             })
         }
 
+    })
+
+//点击提交订单返回到选择支付方式
+    $(".c_clearfix.pt20 .submit_order").on("click",function(){
+        var $timer = setInterval(function(){
+            var $huadongy = window.scrollY;
+            $huadongy -= 100;
+            if($huadongy <= 450){
+                clearInterval($timer);
+            }
+            window.scrollTo(0, $huadongy)
+        },30);
     })
     
 

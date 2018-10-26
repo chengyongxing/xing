@@ -48,7 +48,8 @@ jQuery(function($){
             }
              $($(".yg-card")[1]).on("click",function(e){
                 if(e.target.tagName.toLowerCase()=="a");
-                        Cookie.removeCookie('admin');
+                        var admin = Cookie.getCookie('admin');
+                        Cookie.removeCookie('admin',admin,"/");
                         $($(".yg-card")[1]).remove();
                         $($(".yg-card")[0]).remove();
                         admin();

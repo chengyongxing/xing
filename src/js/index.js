@@ -13,7 +13,7 @@
     admin();
             function admin(){
                var admin = Cookie.getCookie('admin');
-               console.log(admin);
+               // console.log(admin);
                 var $zhanghu = $(".top-nav-tool");
                 if(admin === ''){
                     let cii = `<li class="yg-card">
@@ -56,7 +56,7 @@
                             url : "api/addcar.php",
                             success : function(data){
                                 if(data != ""){
-                                    //把商品存进cookie
+                                    //把商品存进cookie，详情页时用
                                     // console.log(data);
                                     Cookie.removeCookie("xinXi");
                                     Cookie.setCookie("xinXi",data);
@@ -92,6 +92,7 @@
                         })
                     }
                 }
+                //点击退出当前用户
                 $($(".yg-card")[1]).on("click",function(e){
                         if(e.target.tagName.toLowerCase()=="a");
                             var admin = Cookie.getCookie('admin');
@@ -120,17 +121,17 @@
 
 
     //轮播图
-    $(document).ready(function(e) {
-        var unslider04 = $('#b04').unslider({
-            dots: true
-        }),
-        data04 = unslider04.data('unslider');
+    // $(document).ready(function(e) {
+    //     var unslider04 = $('#b04').unslider({
+    //         dots: true
+    //     }),
+    //     data04 = unslider04.data('unslider');
          
-        $('.unslider-arrow04').click(function() {
-            var fn = this.className.split(' ')[1];
-            data04[fn]();
-        });
-    });
+    //     $('.unslider-arrow04').click(function() {
+    //         var fn = this.className.split(' ')[1];
+    //         data04[fn]();
+    //     });
+    // });
 
     //商品
     $.ajax({
@@ -280,5 +281,48 @@
             window.scrollTo(0, $huadongy)
         },30);
     })
+
+//头部搜索框
+    //输入时
+    var $baidu = $("#sch_in");
+    var $ul = $(".houlai");
+    $baidu.on("input",function(){
+        var _baidu = $baidu.val();
+        window.$ul = function(data){
+            // console.log(data);
+            data.s.map(function(item){
+               var sty = `<li>${item}</li>`;
+                $ul.append(sty);
+            });
+        }
+        clearTimeout($baidu.timer);
+        $baidu.timer = setTimeout(function(){
+            var script = document.createElement("script");
+            script.src = "https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?json=1&cb=$ul&wd="+_baidu;
+            document.body.appendChild(script);
+        },200)
+        $ul.html("");
+    })
+    // 失去焦点清空li
+    $baidu.on("change",function(){
+        clearTimeout($baidu.timer);
+        $baidu.timer = setTimeout(function(){
+            $ul.html("");
+        },200)
+    })
+    
+    //点击添加
+    let ull = $("form .l");
+    ull.on("click",function(e){
+        if(e.target.tagName == "LI"){
+            let kkkkkkk = $(e.target).html();
+            $ul.html("");
+            $baidu.val(kkkkkkk);
+        }else{
+            $ul.html("");
+        }
+    })
+
+    
 })
     

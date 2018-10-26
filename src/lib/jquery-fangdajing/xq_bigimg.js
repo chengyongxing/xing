@@ -63,7 +63,7 @@
 				var top=(scaleY*this.height*this.setting.scale)-(scaleY*this.setting.pheight);
 				var left=(scaleX*this.width*this.setting.scale)-(scaleX*this.setting.pwidth);
 				var pdiv="#"+this.pdiv;
-					$(pdiv).find("img").css({'top':-top+"px"});
+					$(pdiv).find("img").css({'top':-top +300+"px"});
 					$(pdiv).find("img").css({'left':-left+"px"});
 			},
 			getSetting:function(){

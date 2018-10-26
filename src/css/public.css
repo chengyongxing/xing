@@ -4,6 +4,10 @@
 *time :20150709
 *author:W.Xl;
 */
+.sch{position:relative;}
+.houlai{position:absolute;left:0;top:35px;}
+.houlai li{border:1px solid #ccc;}
+.houlai li:hover{background:red;}
 #cartlist{
     height:200px;
     overflow:auto;

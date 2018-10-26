@@ -3,7 +3,17 @@
   margin: 0 auto;
   width: 1000px;
 }
-
+.con-FangDa{width:300px;height:550px;background-color:cyan;}
+.con-fangDaIMg{width:300px;height:450px;position:relative;background-color:#454545;}
+.con-fangDaIMg > img{width:100%;height:100%;}
+.magnifyingBegin{width:100px;height:100px;left:0;top:0;background-color:#454545;opacity:0.5;position:absolute;cursor:move;display:none;}
+.magnifyingShow{width:300px;height:300px;display:none;position:absolute;right:-300px;top:0;overflow:hidden;background-color:#454545;}
+.magnifyingShow > img{width:900px;height:1350px;margin-left:0;margin-top:0;}
+.con-FangDa-ImgList{list-style:none;}
+.con-FangDa-ImgList > li{width:50px;height:50px;float:left;margin:4px 0 0 4px;cursor:pointer;border:2px solid #454545;background-color:#454545;}
+.con-FangDa-ImgList > li:first-child{margin-left:0;}
+.con-FangDa-ImgList > li > img{width:100%;height:100%;}
+.con-FangDa-ImgList > .active{border-color:red;}
 .webz .sh-crumbs {
   margin: 20px 0;
   margin-bottom: 20px;
@@ -224,7 +234,6 @@
   padding: 0 22px 0 10px;
   float: left;
   position: relative;
-  z-index: 99;
 }
 
 .sh-goods-parameters .choice-buy dl dd span {

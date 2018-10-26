@@ -134,6 +134,7 @@ jQuery(function($){
                                                     }
                                                 })
                                             }
+                                            //Num为undefined时不要渲染
                                             if(typeof(Num)=="number"){
                                                 $(li[i]).find(".XIAOJI").html("");
                                                 let oo = $(li[i]).find(".jiaGe").html();
@@ -191,7 +192,7 @@ jQuery(function($){
                                             $(".cccc span").html(zShu);
 
                                         })
-                                        //判断
+                                        //判断是否选中
                                         function panduan(){
                                             var len = $waiInput.length;
                                             var checkedLen = $waiInput.filter(":checked").length;
@@ -203,6 +204,7 @@ jQuery(function($){
                                             }
                                         }
                                         panduan2();
+                                        //渲染选中的商品的数量总价
                                         function panduan2(){
                                             let zoNg2 = 0;
                                             let zShu2 = 0;
@@ -289,7 +291,7 @@ jQuery(function($){
                                 $("#gouwu h2").css("display","block");
                                 $("#gouwu h2").html("购物车空空如也！！！！");
                             }
-                            //判断
+                            //一开始先判断一次判断
                             var $yiInput = $(":checkbox").filter(".all");
                             var $waiInput = $(":checkbox").not(".all");
                             var len = $waiInput.length;

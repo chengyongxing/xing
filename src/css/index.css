@@ -4,6 +4,10 @@
 *time :201603 
 *author:L.J;
 */
+.sch{position:relative;}
+.houlai{position:absolute;left:0;top:35px;}
+.houlai li{border:1px solid #ccc;}
+.houlai li:hover{background:red;}
 ul, ol { padding: 0;}
 .banner { position: relative; overflow: auto; text-align: center;}
 .banner li { list-style: none; }

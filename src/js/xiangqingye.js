@@ -187,17 +187,26 @@ jQuery(function($){
 
 
 //==========渲染========
-     $('<span>"'+paramsObj.wenzi+'"</span>').appendTo($('.sh-crumbs'));
+    $('<span>"'+paramsObj.wenzi+'"</span>').appendTo($('.sh-crumbs'));
     $('<span>"'+paramsObj.wenzi+'"</span>').appendTo($(".sh-goods-parameters h1"));
     $('<span>"'+paramsObj.subtit+'"</span>').appendTo($(".sh-goods-parameters .description"));
     $('<span class="price" alt="'+paramsObj.price+'" id="rel_price"><i>￥</i>'+paramsObj.price+'</span>').appendTo($(".price-box .mb"));
 
     ($("#preview .jqzoom img")).attr("src",""+paramsObj.img+"");
 
-    for(var i=1;i<6;i++){
+    for(var i=1;i<4;i++){
         $('<li><img alt="'+paramsObj.wenzi
-+'" title="'+paramsObj.subtit+'" src="'+paramsObj.img+'"/></li>').appendTo($(".items ul"));
++'" title="'+paramsObj.subtit+'" src="'+paramsObj.img+'"/></li>').prependTo($(".items ul"));
     }
+
+
+    $(".items").on("click",function(e){
+        if(e.target.tagName == "IMG"){
+            let lin = $(e.target).attr("src");
+            ($("#preview .jqzoom img")).attr("src","");
+            ($("#preview .jqzoom img")).attr("src",""+lin+"");
+        }
+    })
 //高亮
     $(".items ul").children('li').first().addClass('active');
     $(".items ul").on("mouseover",function(e){
@@ -250,18 +259,20 @@ jQuery(function($){
             $fuzi.remove();
         })
 
-
+//用cookie原因，免得每次添加商品时要写入数据库同时读取数据库渲染，增加请求次数
         let admin = Cookie.getCookie('admin');
         if(admin == ""){
             alert("请先登录");
         }else{
             let qty = $("#goodsNumber .box #lessBtn").next().val() -0;
             paramsObj["qty"]=qty;
+            //查看cookie里的有没有这个商品
             let kkk = JSON.parse(Cookie.getCookie("xinXi"));
             let iii = [];
             kkk.forEach(function(item){
                 iii.push(item.id);
             })
+            //有这个商品则数量相加
             if(iii.indexOf(paramsObj.id) != -1){
                 kkk.forEach(function(item){
                     if(item.id==paramsObj.id){
@@ -271,10 +282,12 @@ jQuery(function($){
                     }
                 })
             }else{
+                //没有则把商品信息添加到购物车
                 kkk.push(paramsObj);
                 let bbb = JSON.stringify(kkk);
                 Cookie.setCookie("xinXi",bbb);
             }
+            //先把之前的div移除，重新渲染
             $(".dadada").remove();
             var jiage1 = 0;
             var shulian1 = 0;
@@ -285,9 +298,7 @@ jQuery(function($){
                                 <span class="immg"><img src = "${item.img}"/></span>
                                 <span class="dmmg">${item.wenzi}</span>
                                 <span class="pmmg">￥${item.price}x${item.qty}</span>
-                            </div>
-
-                            `
+                            </div>`
                 $("#cartlist").append(str);
                 $("#cartlist .none_cart").remove();
                 $("#guding").css("display","block");
@@ -300,7 +311,7 @@ jQuery(function($){
             
             // admin();
             // console.log(kkk)
-            
+            //写入数据库
             $.ajax({
                 type : "GET",
                 url : "../api/xiangqingye.php",
@@ -308,7 +319,7 @@ jQuery(function($){
                 dataType : "json",
                 success : function(data){
                     if(data == true){
-                        
+                        console.log("添加商品成功！");
                     }
                 }
             })
@@ -317,5 +328,48 @@ jQuery(function($){
     })
    
 
+
+
+
+    //头部搜索框
+    //输入时
+    var $baidu = $("#sch_in");
+    var $ul = $(".houlai");
+    $baidu.on("input",function(){
+        var _baidu = $baidu.val();
+        window.$ul = function(data){
+            // console.log(data);
+            data.s.map(function(item){
+               var sty = `<li>${item}</li>`;
+                $ul.append(sty);
+            });
+        }
+        clearTimeout($baidu.timer);
+        $baidu.timer = setTimeout(function(){
+            var script = document.createElement("script");
+            script.src = "https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?json=1&cb=$ul&wd="+_baidu;
+            document.body.appendChild(script);
+        },200)
+        $ul.html("");
+    })
+    // 失去焦点清空li
+    $baidu.on("change",function(){
+        clearTimeout($baidu.timer);
+        $baidu.timer = setTimeout(function(){
+            $ul.html("");
+        },200)
+    })
+    
+    //点击添加
+    let ull = $("form .l");
+    ull.on("click",function(e){
+        if(e.target.tagName == "LI"){
+            let kkkkkkk = $(e.target).html();
+            $ul.html("");
+            $baidu.val(kkkkkkk);
+        }else{
+            $ul.html("");
+        }
+    })
 
 })
